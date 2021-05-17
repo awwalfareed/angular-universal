@@ -1,0 +1,269 @@
+<app-signup-header></app-signup-header>
+<!-- step-1-start-here -->
+<section class="step-3-wrap common-step-wrapper">
+  <div class="container-fluid">
+    <div
+      class="common-step-content-wrapper d-flex justify-content-sm-between flex-column flex-sm-row"
+    >
+      <div class="step-listing">
+        <span class="active-filled"></span>
+        <span class="active-filled"></span>
+        <span class="active"></span>
+        <span></span>
+      </div>
+      <div class="form-content-wrapper w-100">
+        <div class="form-wrapper example-containe">
+          <form
+            #ngoStepThreeForm="ngForm"
+            (submit)="submitStepThird(ngoStepThreeForm)"
+          >
+            <div class="form-container">
+              <div class="form-group mt-md-4">
+                <label class="common-label">Founder Name<sup>*</sup></label>
+                <input
+                  type="text"
+                  class="common-input"
+                  id="founderName"
+                  placeholder="Enter Founder Name"
+                  name="founderName"
+                  [(ngModel)]="model.founderName"
+                  #ngoFounderName="ngModel"
+                  [ngClass]="{
+                    'is-invalid':
+                      ngoFounderName.errors && ngoFounderName.touched
+                  }"
+                  required
+                />
+                <div
+                  class="invalid-feedback fz16"
+                  [hidden]="!ngoFounderName.errors?.required"
+                >
+                  Founder Name is Required
+                </div>
+              </div>
+              <div class="form-group mt-md-4">
+                <label class="common-label">Founder Picture<sup>*</sup></label>
+                <!--Display. if image is uploaded -->
+                <div
+                  *ngIf="ulpoadedFiles.length > 0"
+                  class="image-uploaded position-relative"
+                >
+                  <div style="margin: 5px" class="upload-image-img">
+                    <span (click)="cropImage(ulpoadedFiles[0]?.imgId)">
+                      <img [src]="croppedImage" />
+                    </span>
+                  </div>
+                  <div class="upload-image-edit-img">
+                    <p-fileUpload
+                      name="images"
+                      customUpload="true"
+                      [auto]="true"
+                      [showUploadButton]="false"
+                      (uploadHandler)="onFounderImgUpload($event)"
+                      chooseLabel="Edit Image"
+                      accept=".jpeg, .jpg, .png, .gif"
+                      allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                      maxFileSize="2000000"
+                      required
+                      class="upload-photo"
+                    >
+                    </p-fileUpload>
+                  </div>
+                </div>
+                <!--Default Display-->
+                <p-fileUpload
+                  *ngIf="ulpoadedFiles.length == 0"
+                  name="images"
+                  customUpload="true"
+                  [auto]="true"
+                  [showUploadButton]="false"
+                  (uploadHandler)="onFounderImgUpload($event)"
+                  chooseLabel="Drag a File here or browse for a file to upload"
+                  accept=".jpeg, .jpg, .png, .gif"
+                  allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+                  maxFileSize="2000000"
+                  required
+                >
+                </p-fileUpload>
+              </div>
+            </div>
+            <div class="form-group mt-md-4">
+              <label class="common-label"
+                >Journey of the Founder<sup>*</sup></label
+              >
+              <p-editor
+                name="founderBio"
+                [(ngModel)]="model.founderBio"
+                (onTextChange)="countWords($event)"
+                #founderBio="ngModel"
+                [style]="{ height: '200px' }"
+                required="true"
+                spellcheck="false"
+              >
+                <p-header>
+                  <span class="ql-formats">
+                      <button class="ql-bold" aria-label="Bold"></button>
+                      <button class="ql-italic" aria-label="Italic"></button>
+                      <button class="ql-underline" aria-label="Underline"></button>
+                  </span>
+                  <span class="ql-formats">
+                    <select title="Text Color" class="ql-color">
+                        <option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)" selected=""></option>
+                        <option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
+                        <option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
+                        <option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
+                        <option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
+                        <option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
+                        <option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
+                        <option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)"></option>
+                        <option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
+                        <option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
+                        <option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
+                        <option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
+                        <option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
+                        <option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
+                        <option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
+                        <option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
+                        <option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
+                        <option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
+                        <option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
+                        <option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
+                        <option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
+                        <option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
+                        <option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
+                        <option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
+                        <option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
+                        <option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
+                        <option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
+                        <option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
+                        <option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
+                        <option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
+                        <option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
+                        <option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
+                        <option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
+                        <option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
+                        <option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
+                    </select>
+                    <select title="Background Color" class="ql-background">
+                      <option value="rgb(0, 0, 0)" label="rgb(0, 0, 0)" selected=""></option>
+                      <option value="rgb(230, 0, 0)" label="rgb(230, 0, 0)"></option>
+                      <option value="rgb(255, 153, 0)" label="rgb(255, 153, 0)"></option>
+                      <option value="rgb(255, 255, 0)" label="rgb(255, 255, 0)"></option>
+                      <option value="rgb(0, 138, 0)" label="rgb(0, 138, 0)"></option>
+                      <option value="rgb(0, 102, 204)" label="rgb(0, 102, 204)"></option>
+                      <option value="rgb(153, 51, 255)" label="rgb(153, 51, 255)"></option>
+                      <option value="rgb(255, 255, 255)" label="rgb(255, 255, 255)"></option>
+                      <option value="rgb(250, 204, 204)" label="rgb(250, 204, 204)"></option>
+                      <option value="rgb(255, 235, 204)" label="rgb(255, 235, 204)"></option>
+                      <option value="rgb(255, 255, 204)" label="rgb(255, 255, 204)"></option>
+                      <option value="rgb(204, 232, 204)" label="rgb(204, 232, 204)"></option>
+                      <option value="rgb(204, 224, 245)" label="rgb(204, 224, 245)"></option>
+                      <option value="rgb(235, 214, 255)" label="rgb(235, 214, 255)"></option>
+                      <option value="rgb(187, 187, 187)" label="rgb(187, 187, 187)"></option>
+                      <option value="rgb(240, 102, 102)" label="rgb(240, 102, 102)"></option>
+                      <option value="rgb(255, 194, 102)" label="rgb(255, 194, 102)"></option>
+                      <option value="rgb(255, 255, 102)" label="rgb(255, 255, 102)"></option>
+                      <option value="rgb(102, 185, 102)" label="rgb(102, 185, 102)"></option>
+                      <option value="rgb(102, 163, 224)" label="rgb(102, 163, 224)"></option>
+                      <option value="rgb(194, 133, 255)" label="rgb(194, 133, 255)"></option>
+                      <option value="rgb(136, 136, 136)" label="rgb(136, 136, 136)"></option>
+                      <option value="rgb(161, 0, 0)" label="rgb(161, 0, 0)"></option>
+                      <option value="rgb(178, 107, 0)" label="rgb(178, 107, 0)"></option>
+                      <option value="rgb(178, 178, 0)" label="rgb(178, 178, 0)"></option>
+                      <option value="rgb(0, 97, 0)" label="rgb(0, 97, 0)"></option>
+                      <option value="rgb(0, 71, 178)" label="rgb(0, 71, 178)"></option>
+                      <option value="rgb(107, 36, 178)" label="rgb(107, 36, 178)"></option>
+                      <option value="rgb(68, 68, 68)" label="rgb(68, 68, 68)"></option>
+                      <option value="rgb(92, 0, 0)" label="rgb(92, 0, 0)"></option>
+                      <option value="rgb(102, 61, 0)" label="rgb(102, 61, 0)"></option>
+                      <option value="rgb(102, 102, 0)" label="rgb(102, 102, 0)"></option>
+                      <option value="rgb(0, 55, 0)" label="rgb(0, 55, 0)"></option>
+                      <option value="rgb(0, 41, 102)" label="rgb(0, 41, 102)"></option>
+                      <option value="rgb(61, 20, 102)" label="rgb(61, 20, 102)"></option>
+                  </select>
+                  </span>
+                </p-header>
+              </p-editor>
+              <p class="max-length mt-3" *ngIf="maxWords">
+                Description must be between 10 to 500 Words
+              </p>
+              <div
+                *ngIf="
+                  founderBio.invalid && (founderBio.dirty || founderBio.touched)
+                "
+              >
+                <div *ngIf="founderBio.errors.required" class="error-msg">
+                  Founder Bio is required.
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="arrow-left">
+                <button
+                routerLink="/signupform/step2"
+                  class="arrow-submit"
+                  type="submit"
+                ></button>
+              </div>
+              <div class="arrow-right">
+                <button
+                  class="arrow-submit"
+                  type="submit"
+                  [disabled]="
+                    ngoStepThreeForm.invalid ||
+                    founderImgName == null ||
+                    maxWords
+                  "
+                ></button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <span class="requiredFeilds">
+          <sup>*</sup> Indicated required fields
+        </span>
+      </div>
+    </div>
+    <img
+      src="/assets/images/ngo/r3.png"
+      alt=""
+      class="img-fluid d-lg-none mt-5"
+    />
+  </div>
+  <!-- Loader -->
+  <app-signup-loader [isLoaded]="isLoading"></app-signup-loader>
+</section>
+<!-- founder Image Crop Dialogue Box -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{ display: display }">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{ founderImgName }}</h4>
+      </div>
+      <div class="modal-body">
+        <image-cropper
+          [imageChangedEvent]="imageChangedEvent"
+          [maintainAspectRatio]="true"
+          [aspectRatio]="4 / 4"
+          [resizeToWidth]="476"
+          format="png"
+          (imageCropped)="imageCropped($event)"
+          (imageLoaded)="imageLoaded()"
+          (cropperReady)="cropperReady()"
+          (loadImageFailed)="loadImageFailed()"
+          style="max-height: 500px"
+        >
+        </image-cropper>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-default btn-box-shadow"
+          (click)="SaveCropedImage()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

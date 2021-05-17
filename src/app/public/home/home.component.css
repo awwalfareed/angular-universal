@@ -1,0 +1,675 @@
+* {
+  font-family: var(--font-muli);
+}
+ul {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.common-btn {
+  max-width: 220px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+  border-radius: 8px;
+}
+.orange-btn {
+  background: #f7a212;
+  -webkit-box-shadow: 0 6px 0 #c58d2d;
+  box-shadow: 0 6px 0 #c58d2d;
+}
+.lightblue-btn {
+  background: #0ecedd;
+  -webkit-box-shadow: 0 6px 0 #11afbb;
+  box-shadow: 0 6px 0 #11afbb;
+}
+.wave-bg {
+  background: #253dc0;
+  height: 200px;
+}
+.home-coming-soon-content-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.home-coming-soon-content-wrap span {
+  display: block;
+  font-size: 4.1rem;
+  color: var(--color-orange);
+  font-family: var(--font-muli);
+  position: relative;
+}
+.home-coming-soon-content-wrap span::after {
+  content: "";
+  width: 76px;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  right: -95px;
+  top: 35px;
+}
+.common-heading {
+  margin-top: 20px;
+  font-size: var(--fz41);
+  color: var(--color-white);
+  font-weight: var(--fw-extrabold);
+}
+.common-para {
+  color: #b5b5b5;
+  font-size: 18px;
+  font-weight: 400;
+}
+.learn-more {
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  color: var(--color-orange);
+  text-align: center;
+  margin-top: 90px;
+  text-decoration: underline !important;
+  display: block;
+}
+.scroll-bottom {
+  margin: 40px auto 0;
+  text-align: center;
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+.scroll-bottom img {
+  -webkit-animation: bounce 5s linear infinite;
+  animation: bounce 5s linear infinite;
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+.people-img {
+  margin-top: -90px;
+}
+.arrow-bottom {
+  margin-top: 64px;
+}
+/* inspiration-and-hope-start-here */
+.inspiration-and-hope-wrap {
+  background: url(/assets/images/homepage/inspiration-and-hope-bg.png) no-repeat
+    center center;
+  background-size: 100%;
+  padding-bottom: 187px;
+}
+.inspiration-and-hope-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.inspiration-and-hope-content .common-heading {
+  color: var(--color-blue);
+  font-size: var(--fz80);
+}
+/* how-it-works */
+.how-it-works {
+  padding-bottom: 150px;
+}
+.how-it-works h3 {
+  position: relative;
+  font-size: var(--fz41);
+  color: var(--color-blue);
+  font-weight: var(--fw-bold);
+}
+.how-it-works h3:before {
+  content: "";
+  background: #ebebeb;
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+}
+.how-it-works h3:after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+}
+.how-it-works .common-para {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 55px auto 0;
+  color: #363636;
+  font-weight: 500;
+}
+/* how-it-works-category */
+
+.how-it-works-category {
+  margin-top: 170px;
+}
+.how-it-works-sub-category span {
+  color: #262626;
+  font-weight: var(--fw-extrabold);
+  font-size: 1.6rem;
+}
+.how-it-works-sub-category {
+  position: absolute;
+}
+.how-it-works-sub-category p {
+  color: #959595;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.how-it-works-sub-category.first {
+  left: 0;
+  top: 44px;
+}
+.how-it-works-sub-category.two {
+  bottom: 50px;
+  left: 208px;
+}
+.how-it-works-sub-category.three {
+  left: 374px;
+  bottom: 220px;
+}
+.how-it-works-sub-category p span {
+  font-weight: var(--fw-extrabold);
+  color: #959595;
+  font-size: 1.6rem;
+}
+.how-it-works-sub-category.four {
+  right: 289px;
+  top: 30px;
+}
+/* ngo-associate-wrap */
+.ngo-associate-wrap {
+  background: url(/assets/images/homepage/ngo-associated.png) no-repeat center
+    top;
+  height: 714px;
+  background-size: cover;
+  margin-bottom: 200px;
+}
+.ngo-associate-wrap h3 {
+  font-size: 7.2rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-blue);
+}
+
+.ngo-associate-wrap h4 {
+  font-size: 1.8rem;
+  color: var(--color-white);
+  font-weight: var(--fw-bold);
+}
+.ngo-associate-wrap .common-btn {
+  width: 193px;
+  color: var(--color-orange);
+  font-size: 1.6rem;
+  background: #fff;
+  -webkit-box-shadow: 0 6px 0 #e2991c;
+  box-shadow: 0 6px 0 #e2991c;
+}
+
+.m-190 {
+  width: 100%;
+  max-width: 190px;
+}
+/* why-join-wrap */
+.why-join-for-ngo-wrap {
+  padding-bottom: 0px;
+  background: url(/assets/images/homepage/why-join-left-img.png) no-repeat left
+      81px,
+    url(/assets/images/homepage/why-join-right-img.png) no-repeat right 173px,
+    url(/assets/images/homepage/why-join-bottom-left-img.png) no-repeat left
+      bottom;
+}
+
+.why-join p {
+  color: #363636;
+  font-weight: 600;
+}
+/* for-ngo */
+
+.for-ngo h4 {
+  color: #c8c8c8;
+  font-size: 30px;
+  font-weight: var(--fw-bold);
+}
+.for-ngo-inner {
+  margin-top: 120px;
+  max-width: 670px;
+  margin: 120px auto 0;
+}
+.for-ngo-inner h4 {
+  font-size: 21px;
+  color: var(--color-blue);
+  font-weight: var(--fw-extrabold);
+  margin-top: 45px;
+}
+.ngo-inner-item {
+  margin-bottom: 90px;
+}
+.signup.common-btn {
+  color: #f4a934;
+  background: none;
+  border: 1px solid #f4a934;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 400px;
+  margin-top: 26px;
+  font-weight: 700;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 8px;
+}
+/* for-volunteers */
+.for-volunteers {
+  background: url(/assets/images/homepage/for-volunteer-left-img.png) no-repeat
+      right 81px,
+    url(/assets/images/homepage/for-volunteer-right-bottom-img.png) no-repeat
+      left bottom;
+  padding-top: 180px;
+}
+/* connect-with-us */
+.connect-with-us-wrap {
+  padding: 200px 0;
+}
+.connect-with-us-inner h3 {
+  font-size: 3.6rem;
+  font-weight: var(--fw-extrabold);
+  margin-bottom: 65px;
+}
+.follow-qause h3 {
+  color: var(--color-blue);
+}
+.connect-with-us h3 {
+  color: var(--color-orange);
+}
+.connect-with-us a {
+  display: block;
+  width: 100%;
+}
+.whtsapp-gmail span {
+  color: #253dc0;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.follow-qause-social-network div span {
+  width: 29px;
+  height: 29px;
+  background: url(/assets/images/homepage/follow-qause-instagram.png) no-repeat;
+  background-position: top;
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  display: block;
+  padding-top: 30px;
+  margin: 0 auto;
+}
+.follow-qause-social-network div:nth-child(2) span {
+  background: url(/assets/images/homepage/follow-qause-youtube.png) no-repeat;
+  width: 42px;
+}
+.follow-qause-social-network div:nth-child(3) span {
+  background: url(/assets/images/homepage/follow-qause-facebook.png) no-repeat;
+  width: 30px;
+}
+
+.follow-qause-social-network div:hover span {
+  background-position: bottom;
+}
+.follow-qause-social-network span p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+.instagram p {
+  color: #de5aff;
+}
+.youtube p {
+  color: #eb335a;
+}
+.facebook p {
+  color: #3987ff;
+}
+/* passion-guru-wrap */
+.passion-guru-wrap {
+  background: url(/assets/images/homepage/passion-guru-bg.png) no-repeat center
+    center;
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.passion-guru-content {
+  max-width: 400px;
+}
+.passion-guru-content p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.social-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 200px;
+}
+.social-icons ul li {
+  display: inline-block;
+}
+.social-icons ul li a {
+  background: url(/assets/images/homepage/passion-guru-socialicon.png) no-repeat
+    center;
+  width: 33px;
+  height: 25px;
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  background-position: top;
+  display: block;
+}
+.social-icons ul li:hover a {
+  background-position: bottom;
+}
+.social-icons ul li:nth-child(1) a {
+  background-position: 0 0;
+}
+.social-icons ul li:hover:nth-child(1) a {
+  background-position: 0 -29px;
+}
+.social-icons ul li:nth-child(2) a {
+  background-position: -59px 0;
+}
+.social-icons ul li:hover:nth-child(2) a {
+  background-position: -59px -28px;
+}
+.social-icons ul li:nth-child(3) a {
+  background-position: -124px 0;
+}
+.social-icons ul li:hover:nth-child(3) a {
+  background-position: -124px -29px;
+}
+.passion-guru-ngo-children-img {
+  border: 1px solid #ffd141;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+.passion-guru-ngo-children-img .img-thumbnail {
+  padding: 0;
+  background-color: transparent;
+  border: 5px solid #ffd141;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-top: -14px;
+  margin-left: 14px;
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .home-coming-soon-content-wrap {
+    top: 33%;
+    -webkit-transform: translate(-50%, -33%);
+    -ms-transform: translate(-50%, -33%);
+    transform: translate(-50%, -33%);
+  }
+  .learn-more {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-coming-soon-content-wrap {
+    top: 33%;
+    -webkit-transform: translate(-50%, -33%);
+    -ms-transform: translate(-50%, -33%);
+    transform: translate(-50%, -33%);
+  }
+  .home-coming-soon-content-wrap span::after {
+    right: -60px;
+    top: 30px;
+  }
+  .learn-more {
+    margin-top: 25px;
+  }
+  .inspiration-and-hope-wrap {
+    padding-bottom: 68px;
+  }
+  .how-it-works-category {
+    margin-top: 40px;
+  }
+  .how-it-works {
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+  .ngo-associate-wrap {
+    background-size: cover;
+    margin-bottom: 0;
+    padding: 65px 0;
+    height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .wave-bg {
+    height: 300px;
+  }
+  .people-img {
+    margin-top: -60px;
+  }
+
+  .home-coming-soon-content-wrap span::after {
+    right: -82px;
+    top: 26px;
+  }
+  .subscribe-btn {
+    width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .logo img {
+    max-width: 150px;
+  }
+  .home-coming-soon-content-wrap span {
+    font-size: 18px;
+  }
+
+  .home-coming-soon-content-wrap span::after {
+    right: 60px;
+    top: 42px;
+  }
+  .learn-more {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .scroll-bottom {
+    margin: 17px auto 0;
+  }
+  .arrow-bottom {
+    margin-top: 40px;
+  }
+  .home-coming-soon-content-wrap {
+    top: 28px;
+    -webkit-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .inspiration-and-hope-wrap {
+    background-position: 0 311px;
+  }
+  .inspiration-and-hope-content {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  .inspiration-and-hope-btn .common-btn {
+    display: table;
+  }
+  .common-btn {
+    font-size: 14px;
+    width: auto;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    width: auto;
+  }
+
+  .inspiration-and-hope-btn {
+    margin-top: 50px;
+  }
+  .how-it-works p {
+    padding: 0 15px;
+  }
+  .how-it-works h3:after {
+    max-width: 220px;
+  }
+  .how-it-works .common-para {
+    margin-top: 30px;
+  }
+  .ngo-associate-wrap {
+    background-position: 0 0;
+  }
+  .ngo-associate-item {
+    margin: 0 15px;
+  }
+  .ngo-associate-wrap .common-btn {
+    width: auto;
+  }
+  .why-join-for-ngo-wrap {
+    background: url(/assets/images/homepage/mobile-why-join-left-img.png)
+        no-repeat left 160px,
+      url(/assets/images/homepage/why-join-right-img.png) no-repeat 212px 260px,
+      url(/assets/images/homepage/mobile-why-join-bottom-left-img.png) no-repeat -10px
+        700px;
+    padding-bottom: 31px;
+  }
+  .ngo-inner-item {
+    margin-bottom: 50px;
+  }
+  .for-volunteers {
+    background: url(/assets/images/homepage/mobile-for-volunteer-left-img.png)
+        no-repeat right 0px,
+      url(/assets/images/homepage/for-volunteer-right-bottom-img.png) no-repeat -5px
+        804px;
+    padding-bottom: 30px;
+  }
+  .connect-with-us-wrap {
+    padding: 100px 0;
+  }
+  .follow-qause-social-network {
+    margin: 40px 0 80px !important;
+  }
+  .whtsapp-gmail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .whtsapp-gmail .whtsapp {
+    margin-right: 20px;
+  }
+  .whtsapp-gmail .gmail {
+    margin-left: 20px;
+  }
+  .passion-guru-wrap {
+    background: url(/assets/images/homepage/mobile-passion-guru-bg.jpg)
+      no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+  }
+  .passion-guru-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .passion-guru-ngo-children-img {
+    margin-top: 50px;
+  }
+  .passion-guru-ngo-children-img .img-thumbnail {
+    border-color: #0ecedd;
+    margin-top: -20px;
+    margin-left: 5px;
+  }
+  .social-icons ul li a {
+    background: url(/assets/images/homepage/mobile-passion-guru-socialicon.png)
+      no-repeat center;
+  }
+  .social-icons ul li:nth-child(1) a {
+    width: 25px;
+  }
+  .social-icons ul li:nth-child(2) a {
+    margin: 0 30px;
+  }
+  .footer-contact-info {
+    top: 73%;
+  }
+}

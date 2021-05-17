@@ -1,13 +1,29 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>AngularUniversal</title>
+  <title>UniversalApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    const po = new PerformanceObserver((list) => {
+      for (const entry of list.getEntriesByName('first-contentful-paint')) {
+        console.log('FCP: ', entry.startTime);
+        po.disconnect();
+      }
+    });
+    po.observe({
+      type: 'paint',
+      buffered: true
+    });
+  </script>
+
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
 </html>

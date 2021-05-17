@@ -1,0 +1,40 @@
+.verify-number {
+  padding-bottom: 50px;
+}
+.otperror {
+  color: red !important;
+}
+.pt-8 {
+  padding-top: 8px;
+}
+
+.ngo-otp-verificaion p {
+  font-size: 1.5rem;
+  color: #353636;
+  font-weight: 400;
+}
+label {
+  font-size: 1.5rem;
+  color: #313131;
+  font-weight: 400;
+}
+:host >>>  .ui-chkbox .ui-chkbox-box {
+  border-radius: 0;
+  border-collapse: #a9a9a9;
+}
+:host >>> .ui-button {
+  margin: 0 auto;
+}
+:host >>> .ui-button.ui-button-text-only .ui-button-text {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.btn-box-shadow:disabled {
+  color: #fff;
+  background: #eee !important;
+  color: #636363;
+}
+.btn-box-shadow:enabled {
+  color: #fff !important;
+  background: #253dc1 !important;
+}

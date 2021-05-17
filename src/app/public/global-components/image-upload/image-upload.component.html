@@ -1,0 +1,39 @@
+<p-fileUpload
+                  *ngIf="uploadFiles.length == 0"
+                  name="images"
+                  customUpload="true"
+                  [auto]="true"
+                  (uploadHandler)="onImageUpload($event)"
+                  chooseLabel="Drag a File here or browse for a file to upload"
+                  accept=".jpg, .png, .jpeg, .gif"
+                  maxFileSize="2097000"
+                  class="upload-photo"
+                  required
+                >
+                </p-fileUpload>
+                <div
+                  *ngIf="uploadFiles.length > 0"
+                  class="image-uploaded position-relative"
+                  [class.pBorder]="bordered"
+                >
+                  <div style="margin: 5px" class="upload-image-img">
+                    <span (click)="cropImage(uploadFiles[0]?.imgId)">
+                      <img [src]="uploadFiles[0]?.imgBase64" />
+                    </span>
+                  </div>
+                  <div class="upload-image-edit-img">
+                    <p-fileUpload
+                      name="images"
+                      customUpload="true"
+                      [auto]="true"
+                      [showUploadButton]="false"
+                      (uploadHandler)="onImageUpload($event)"
+                      chooseLabel="Edit Image"
+                      accept=".jpg, .png, .jpeg, .gif"
+                      maxFileSize="2000000"
+                      class="upload-photo"
+                      required
+                    >
+                    </p-fileUpload>
+                  </div>
+                </div>

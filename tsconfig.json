@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@common/*": ["src/app/common/*"],
+      "@public/*": ["src/app/public/*"],
+      "@stateManagement/*": ["src/app/stateManagement/*"],
+      "@node_modules/*": ["node_modules/*"],
+  }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

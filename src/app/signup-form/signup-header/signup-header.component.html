@@ -1,0 +1,77 @@
+<header id="signupnext">
+    <div class="container-fluid">
+      <div class="cont_Detail py-2 d-flex d-sm-none mt-0 justify-content-between">
+        <a href="tel:9119333999">
+          <span class="callicon mr-0">
+            <i class="fa fa-phone"></i>{{ dynamicData?.supportNumber }}
+          </span>
+        </a>
+        <a href="mailto:support@qause.com">
+          <span class="mr-0">
+            <i class="fa fa-envelope"></i>{{ dynamicData?.supportMail }}
+          </span>
+        </a>
+      </div>
+      <div class="ngosignuphead d-flex justify-content-between">
+        <div class="signuplogo d-flex align-items-center" >
+          <div id="menuToggle" class="d-xl-none mr-4 mt-2 active" (click)="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a class="navbar-brand">
+            <img
+              src="/assets/images/qause-logo.png"
+              alt="logo"
+              class="img-fluid"
+            />
+          </a>
+        </div>
+        <nav class="navbar navbar-expand-xl navbar-light bg-transparent">
+          <!-- Collection of nav links, forms, and other content for toggling -->
+          <div class="cont_Detail d-sm-flex">
+            <a href="tel:9119333999"
+              ><span class="callicon d-sm-block d-none"
+                ><i class="fa fa-phone mr-2"></i>+91 9119333999</span
+              ></a
+            >
+            <a href="mailto:support@qause.com">
+              <span class="d-none d-sm-block"
+                ><i class="fa fa-envelope mr-2"></i>support@qause.com</span
+              ></a
+            >
+            <a (click)="ngoLogout()">
+              <span class="d-none d-sm-block"><i class="fa fa-sign-out"></i> Logout</span></a>
+            <!-- <div class="position-relative languageStyle">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="nav-item nav-link dropdown-toggle p-0 mr-4 common-header-nav language-dropdown text-center"
+                >En</a
+              >
+              <div class="dropdown-menu" [ngStyle]="{ top: '40px' }">
+                <a href="#" class="dropdown-item common-header-nav">Hindi</a>
+                <a href="#" class="dropdown-item common-header-nav">English</a>
+              </div>
+            </div> -->
+          </div>
+          <!-- <div
+            class="nav-item dropdown"
+          >
+          <a data-toggle="dropdown">
+            <span class="d-none d-sm-block"
+              ><i class="fa fa-user mr-2"></i>
+              </span
+
+            ></a
+          >
+            <div class="dropdown-menu" [ngStyle]="{ top: '55px' }">
+              <a class="dropdown-item" (click)="ngoLogout()"
+                ><i class="fa fa-sign-out"></i> Logout</a
+              >
+            </div>
+          </div> -->
+        </nav>
+      </div>
+    </div>
+  </header>

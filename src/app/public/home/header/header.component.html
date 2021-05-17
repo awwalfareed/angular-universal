@@ -1,0 +1,56 @@
+<header [class.header_change]="header_variable">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="mobile-join-us d-lg-none d-block">
+        <a href="#">Join Us</a>
+    </div>
+      <div class="logo" data-aos="fade-up">
+        <a href="#" class="d-lg-block d-none"
+          ><img src="/assets/images/homepage/logo.png" class="img-fluid " alt=""
+        /></a>
+        <a href="#" class="d-lg-none d-block"
+          ><img src="/assets/images/homepage/mobile-qause-logo.png" class="img-fluid " alt=""
+        /></a>
+      </div>
+      <div class="d-none header_change_logo">
+        <a href="#"
+          ><img
+            src="/assets/images/homepage/active-logo.png"
+            class="img-fluid d-lg-block d-none"
+            alt=""
+        /></a>
+        <a href="#"
+          ><img
+            src="/assets/images/homepage/mobile-qause-activelogo.png"
+            class="img-fluid d-lg-none d-block"
+            alt=""
+        /></a>
+      </div>
+      
+      <div class="navigation">
+        <div class="blacklayer {{this.navToggle}}">
+        <div id="nav-icon1" class="menubar d-xl-none mr-4 mt-2 {{this.navToggle}}" (click)="toggle()">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+        <ul class="d-lg-flex {{this.navToggle}}">
+          <li data-aos="fade-up"><a routerLink="/">Home</a></li>
+          <li data-aos="fade-up"><a routerLink="/ngo-signup">Join as NGO</a></li>
+          <li data-aos="fade-up"><a routerLink="/joinus/selection/">Become Volunteer</a></li>
+          <li data-aos="fade-up"><a routerLink="/ngo-login">Log In</a></li>
+        </ul>
+      </div>
+      <div class="social-icons d-lg-flex  d-none">
+        <a href="" data-aos="fade-up"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="" data-aos="fade-up"
+          ><i class="fa fa-youtube-play mr-4 ml-4" aria-hidden="true"></i
+        ></a>
+        <a href="" data-aos="fade-up"
+          ><i class="fa fa-facebook-official" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</header>

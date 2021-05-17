@@ -1,0 +1,134 @@
+<section class="common-fixed d-flex">
+  <div class="common-content-wrap ngo-otp-verificaion m-auto">
+    <div class="logo-w-90 mt-4 mb-5">
+      <img src="/assets/images/qause-logo.png" alt="Qause" class="img-fluid" />
+    </div>
+    <div class="verify-number mt-md-5 mt-5">
+      <form #loginForm="ngForm" (submit)="onLogin(loginForm)">
+        <p class="fz30 fw500 pt-3 mb-5 text-center">Login Detail</p>
+        <div *ngIf="show">
+          <label for="" class="common-label">Email Address</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"
+                ><i class="fa fa-envelope" aria-hidden="true"></i
+              ></span>
+            </div>
+            <input
+              (keyup)="errors=''"
+              type="text"
+              class="form-control"
+              placeholder="Your Email Address"
+              name="ngoemail"
+              [(ngModel)]="model.ngoemail"
+              #userEmail="ngModel"
+              [ngClass]="{
+                'is-invalid':
+                  (userEmail.errors && userEmail.touched && !userEmail.value) ||
+                  (errors.payload?.email && userEmail.touched) ||
+                  userEmail.errors?.pattern
+              }"
+              pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+            />
+              <div
+              class="invalid-feedback fz16"
+              [hidden]="!userEmail.errors?.pattern"
+            >
+              Use a Valid Email.
+            </div>
+            <div class="invalid-feedback fz16" [hidden]="!errors.payload?.email">
+              {{ errors.payload?.email }}
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!show">
+          <label for="" class="common-label">Mobile Number</label>
+          <div class="input-group my-group">
+            <p-dropdown
+              [options]="items"
+              [(ngModel)]="selectedCode"
+              name="selectedCode"
+              filter="true"
+              filterBy="value"
+              class="mobile-dopdown"
+            >
+              <ng-template let-item pTemplate="selectedItem">
+                <img
+                  src="assets/images/countryFlags/{{
+                    item.label | lowercase
+                  }}.png"
+                  style="width: 16px; vertical-align: middle"
+                />
+                <span style="vertical-align: middle; margin-left: 0.5em"
+                  >+{{ item.value }}</span
+                >
+              </ng-template>
+              <ng-template let-car pTemplate="item">
+                <div
+                  class="ui-helper-clearfix"
+                  style="position: relative; height: 25px"
+                >
+                  <img
+                    src="assets/images/countryFlags/{{
+                      car.label | lowercase
+                    }}.png"
+                    style="width: 24px; position: absolute; top: 1px; left: 5px"
+                  />
+                  <div style="font-size: 14px; float: right; margin-top: 4px">
+                    +{{ car.value }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <input
+              (keyup)="errors=''"
+              type="number"
+              placeholder="Your mobile number"
+              name="ngomobileno"
+              [(ngModel)]="model.mobileno"
+              #userMobile="ngModel"
+              required
+              [ngClass]="{
+                'is-invalid':
+                  (userMobile.errors &&
+                    userMobile.touched &&
+                    !userMobile.value) ||
+                  (errors.payload?.mobile && userMobile.touched) ||
+                  userMobile.errors?.minlength
+              }"
+            />
+            <div
+              class="invalid-feedback fz16"
+              [hidden]="!userMobile.errors?.minlength"
+            >
+              Use a valid Mobile Number
+            </div>
+            <div
+              class="invalid-feedback fz16"
+              [hidden]="!errors.payload?.mobile"
+            >
+              {{ errors.payload?.mobile }}
+            </div>
+          </div>
+        </div>
+        <h3 (click)="toggle(loginForm)" class="toggleBtn">{{ buttonName }}</h3>
+        <button
+          pButton
+          type="submit"
+          label="Request OTP"
+          class="border-radius4px btn-box-shadow"
+          [disabled]="!loginForm.valid"
+        ></button>
+      </form>
+    </div>
+  </div>
+  <!-- <div class="spinner_overlay" *ngIf="isLoading">
+    <div class="loader-spinner">
+      <p-progressSpinner
+        [style]="{ width: '50px', height: '50px' }"
+        strokeWidth="5"
+      ></p-progressSpinner>
+    </div>
+  </div> -->
+  <!-- <app-loader [isLoaded]="isLoading"></app-loader> -->
+</section>

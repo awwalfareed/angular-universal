@@ -1,0 +1,26 @@
+<section class="common-fixed bg-grey d-flex">
+  <div class="common-content-wrap ngo-otp-verificaion m-auto">
+    <div class="logo-w-90 mt-4 mb-5">
+      <img src="/assets/images/qause-logo.png" alt="Qause" class="img-fluid">
+    </div>
+    <button class="common-bck-btn mb-4" routerLink="/ngo-signup"> <i class="fa fa-angle-left"></i>Back</button>
+    <p>We’ve sent an OTP on your Mobile Number <strong>{{newSignup.mobile}}</strong> Please enter
+      it below to complete the verification.</p>
+    <div class="verify-number mt-md-5 mt-4 text-center">
+      <otp-input [setting]="settings" (onValueChange)="onInputChange($event)" (keyup)="errors=''"></otp-input>
+      <p class="otperror fz16" *ngIf="otpRequired">OTP is Required</p>
+      <p class="otperror fz16" *ngIf="errors.payload?.otp">{{errors.payload?.otp}}</p>
+      <button class="verify-btn mt-3 mb-4 bg-blue w-100" (click)="saveSignupData()" [disabled]="isDisabled !=6">Verify Number</button>
+      <div class="field-wrap">
+        <div class="p-field-checkbox d-flex pt-8">
+          <p-checkbox class="example-margin mr-2" name="isCheck" [(ngModel)]="isCheck" (click)="onCheckClick($event)">
+          </p-checkbox>
+          <label for="binary">Stay logged in</label>
+        </div>
+      </div>
+      <p class="text-left mt-4">By continuing you agree to Qause Network’s <br>
+        Conditions of Use and <a href="#" class="black-color fw600">Privacy Policy.</a></p>
+    </div>
+  </div>
+  <!-- <app-loader [isLoaded]="isLoading"></app-loader> -->
+</section>

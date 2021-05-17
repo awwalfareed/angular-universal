@@ -1,0 +1,463 @@
+:host >>> .ui-fileupload-choose .ui-button-icon-left{
+  position: static;
+}
+/* common styles */
+.container-fluid {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
+  .common-step-content-wrapper {
+    max-width: 590px;
+  }
+  
+  .step-listing {
+    width: 40px;
+    margin-right: 72px;
+    margin-top: 100px;
+  }
+  
+  .step-listing span {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #253dc0; 
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .arrow-submit {
+    background: url(/assets/images/submit-btn.png)no-repeat;
+    width: 66px;
+    height: 66px;
+    border: 0;
+    opacity: 1;
+    -webkit-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+  }
+  .arrow-submit:hover {
+    background: url(/assets/images/submit-btn-hover.png)no-repeat;
+  }
+  .arrow-submit:disabled:hover{
+    background: url(/assets/images/submit-btn.png)no-repeat;
+  }
+  .arrow-left{
+    transform: rotate(
+180deg
+);
+  }
+  .step-listing span:last-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  
+  .step-listing span.active:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #253dc0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .step-listing span:after {
+    left: 0px;
+    right: 0;
+    margin: auto;
+    content: "";
+    height: 45px;
+    width: 5px;
+    background: #868686;
+    display: block;
+    bottom: -47px;
+    position: absolute;
+  }
+  
+  .step-listing span:last-child:after {
+    content: none;
+  }
+  
+  .common-step-wrapper {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  
+  .form-wrapper {
+    margin-top: 30px;
+  }
+  
+  .form-wrapper h3 {
+    font-size: 2.4rem;
+    color: #011427;
+    font-weight: 400;
+  }
+  
+  .common-label {
+    width: 100%;
+    font-size: 2rem;
+    color: #011427;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .common-input {
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    height: 54px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #21222b;
+    padding: 0 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+  }
+  
+  .common-input:focus {
+    border: 1px solid #253dc0;
+    box-shadow: none;
+    outline: 0;
+  }
+  
+  .custom-select-step span.arrow-down {
+    top: 16px;
+    right: 15px;
+  }
+  
+  .border-dashed {
+    border: 1px dashed #7b7979 !important;
+  }
+  
+  .dragdrop {
+    border: 2px dashed #7b7979;
+    height: 70px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #484848;
+    line-height: 70px;
+    text-align: center;
+  }
+  
+  .submit-approval {
+    width: 300px;
+    height: 60px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #253dc0;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 500;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    outline: 0;
+  }
+  .submit-approval:disabled{
+    opacity: .5;
+  }
+
+  .main-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #011427;
+  }
+  
+  .requiredFeilds {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  
+  :host >>> .ui-button {
+    margin: 0.5em 0.5em 0.5em 0;
+    width: 140px;
+  }
+  /* submit-popup */
+  
+  /* submit-popup */
+  
+  :host >>> .ui-dialog .ui-dialog-titlebar {
+    background: none;
+    border: 0;
+  }
+  
+  :host >>> .ui-dialog .ui-dialog-content {
+    border: 0;
+    background: none;
+    padding: 0;
+  }
+  
+  :host >>> .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon span {
+    color: #000;
+  }
+  :host >>> .ui-dialog .ui-dialog-titlebar {
+    border: 0;
+    background: #fafbfd;
+  }
+  :host >>> .ui-dialog .ui-dialog-content {
+    background: #fafbfd;
+  }
+  :host >>> .ui-dialog .ui-dialog-content {
+    padding: 0;
+  }
+  .submit-popup-inner {
+    text-align: center;
+  }
+  .submit-popup-inner h3 {
+    font-weight: 300;
+    font-size: 5.2rem;
+    color: #4c4c4c;
+  }
+  .popup-btn {
+    margin-top: 30px;
+    height: 75px !important;
+    padding: 0 30px;
+    width: auto;
+    margin-bottom: 15px;
+  }
+  /* upload-photo-css-start-here */
+  :host >>> .ui-fileupload .ui-fileupload-buttonbar .ui-button {
+    margin-right: 0;
+    width: 100%;
+    padding: 0;
+  }
+  :host >>> .ui-fileupload .ui-fileupload-buttonbar {
+    border: 2px dashed #7b7979;
+    background: #f5f6f7;
+    height: 254px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  :host >>> .ui-fileupload .ui-fileupload-content {
+    border: 0;
+  }
+  :host >>> .ui-button {
+    background: none;
+    border: 0;
+    font-size: 1.6rem;
+    color: #484848;
+  }
+  :host >>> .ui-fileupload-choose:not(.ui-state-disabled):active {
+    border-color: none !important;
+    background-color: none !important;
+    color: #484848;
+    font-size: 1.6rem;
+    background: none !important;
+  }
+  :host >>> .ui-fileupload-choose:not(.ui-state-disabled):hover {
+    background: none;
+    border-color: 0;
+    color: #333333;
+  }
+  :host >>> .ui-progressbar {
+    background: none;
+  }
+  :host >>> .upload-photo .ui-button {
+    font-size: 1.2rem;
+    padding: 0.5em 0.8em;
+  }
+  :host >>> .ui-fileupload-choose.ui-state-focus {
+    box-shadow: none;
+  }
+  :host >>> .ui-button.ui-button-text-icon-left .ui-button-text {
+    color: #484848;
+    font-weight: 500;
+  }
+  /*upload image popup */
+  .modal-dialog {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .modal-title {
+    font-size: 2.4rem;
+    color: #011427;
+    font-weight: 500;
+  }
+  .modal-footer .btn-box-shadow {
+    background: #253dc0 !important;
+    width: 100px;
+    font-size: 1.4rem;
+    color: #fff !important;
+  }
+  .modal-content {
+    -webkit-box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(245 246 247 / 51%);
+  }
+  .upload-image-img {
+    position: relative;
+  }
+  .upload-image-img img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  .upload-image-img span {
+    margin-left: 0 !important;
+  }
+  :host >>> .ui-fileupload .ui-fileupload-content {
+    background-color: transparent;
+  }
+  .upload-image-edit-img
+    :host >>>
+    .ng-star-inserted
+    .image-uploaded
+    .ui-fileupload
+    .ui-fileupload-buttonbar {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    display: block;
+  }
+  
+  :host >>> .ng-star-inserted .image-uploaded .pi-plus:before {
+    content: "\f040";
+    font-family: FontAwesome;
+    color: #fff;
+    font-size: 15px;
+    margin-top: -2px !important;
+    display: block;
+    margin-left: 2px;
+  }
+  .image-uploaded{
+    display: inline-block;
+  }
+  .upload-image-img {
+    border: 2px solid #eee;
+    margin: 0 !important;
+    display: inline-block;
+    position: static;
+    width: 480px;
+    height: auto;
+  }
+  .upload-image-img span {
+    margin-left: 0 !important;
+  }
+  :host >>> .ui-button.ui-button-icon-only {
+    width: auto;
+  }
+  :host >>> .ui-fileupload .ui-fileupload-content {
+    padding: 0;
+  }
+  .upload-image-edit-img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  :host >>> 
+    .upload-image-edit-img
+    .ui-fileupload
+    .ui-fileupload-buttonbar
+    .ui-button {
+    height: 100%;
+    margin-top: 1px;
+    position: static;
+  }
+  :host >>> .upload-image-edit-img .ui-fileupload .ui-fileupload-buttonbar {
+    margin-right: 0;
+    background: #253dc0;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 0;
+  }
+  .error-msg{
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;
+  }
+  :host >>> .image-uploaded .pi.pi-plus{
+    color: #fff;
+    margin-left: 3px;
+    position: absolute;
+  }
+  /* upload-photo-css-end-here */
+  @media (max-width: 1024px) {
+    .step-3-wrap {
+      background-size: 40%;
+    }
+  
+    .container-fluid {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .step-1-wrap {
+      background: none;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .step-3-wrap {
+      background: none;
+    }
+  }
+  
+  @media (max-width: 567px) {
+    .common-step-wrapper {
+      padding-top: 30px;
+    }
+  
+    .form-wrapper {
+      margin-top: 20px;
+    }
+  
+    .step-listing {
+      margin-top: 0;
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  
+    .step-listing span {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
+  
+    .step-listing span:after {
+      height: 5px;
+      width: 41px;
+      bottom: 15px;
+      left: 38px;
+    }
+    .arrow-submit {
+      margin-top: 20px;
+    }
+
+    .upload-image-img {
+        width: auto;
+    }
+
+    .submit-approval{
+        width: 230px;
+        margin-top: 5px;
+        font-size: 2.4rem;
+    }
+  }
+  
+  p.max-length {
+    color: #df0404;
+  }
+  /* end common style */
+  
