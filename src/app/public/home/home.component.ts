@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import AOS from 'aos';
+// import AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    AOS.init({
-      easing: 'ease-out-back',
-      duration: 1000
-    });
+    // AOS.init({
+    //   easing: 'ease-out-back',
+    //   duration: 1000
+    // });
   }
 
 }

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgoService } from '@common/services/ngo.service';
 import { UserService } from '@common/services/user.service';
-import { ProfileSidebarComponent } from '@ngo/profile-sidebar/profile-sidebar.component';
+// import { ProfileSidebarComponent } from '@ngo/profile-sidebar/profile-sidebar.component';
 
 @Component({
   selector: 'app-signup-header',
   templateUrl: './signup-header.component.html',
   styleUrls: ['./signup-header.component.css'],
-  providers: [ProfileSidebarComponent],
+  // providers: [ProfileSidebarComponent],
 })
 export class SignupHeaderComponent implements OnInit {
 
@@ -18,14 +18,14 @@ export class SignupHeaderComponent implements OnInit {
 
   constructor(
     private ngoService: NgoService,
-    public _profile: ProfileSidebarComponent,
+    // public _profile: ProfileSidebarComponent,
     private userService: UserService
   ) { }
  
   ngOnInit(): void {
   }
   toggle() {
-    this._profile.togglrBar();
+    // this._profile.togglrBar();
   }
   ngoLogout() {
     this.userService.ngoLogout();

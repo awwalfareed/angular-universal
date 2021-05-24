@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing',
@@ -8,12 +8,12 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(public translate: TranslateService) {
-    translate.addLangs(['en', 'hi']);
-    translate.setDefaultLang('en');
+  constructor() {
+    // translate.addLangs(['en', 'hi']);
+    // translate.setDefaultLang('en');
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|hi/) ? browserLang : 'en');
+    // const browserLang = translate.getBrowserLang();
+    // translate.use(browserLang.match(/en|hi/) ? browserLang : 'en');
   }
 
   ngOnInit(): void {
