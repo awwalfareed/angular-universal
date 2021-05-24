@@ -1,0 +1,66 @@
+<div>
+  <div class="ngo-banner-info-wrap">
+    <div class="container-fluid">
+    <div class="ngo-banner-info-inner">
+      <div class="row">
+        <div class="col-xl-4 col-md-12 col-12 ">
+          <div class="ngo-name-share-icon d-flex justify-content-between align-items-center">
+            <div>
+              <h1 class="fz32 color-white ngo-name text-capitalize">{{profileDetails?.name}} </h1>
+            </div>
+              <!-- <div>
+                <img src="/assets/images/qause/homepage/ngo-profile/share-icon.png" class="img-fluid ml-2" alt="">
+              </div> -->
+            </div>
+            <ul class="location-founding-year">
+                <li class="text-capitalize">
+                  <span *ngIf="profileDetails?.address?.city">{{profileDetails?.address?.city}},</span> &nbsp;
+                  <span *ngIf="profileDetails?.address?.state">{{profileDetails?.address?.state}},</span>&nbsp;
+                  <span *ngIf="profileDetails?.address?.country">{{profileDetails?.address?.country}}</span>
+                </li>
+                <li>Founding Year - {{profileDetails?.foundingYear}}</li>
+            </ul>
+            <!-- <div class="msg-us">
+              <p> <span> Message Us</span><i class="fa fa-long-arrow-right ml-5" aria-hidden="true"></i></p>
+            </div>
+            <div class="live-impact d-flex">
+                <h2>10,124</h2>
+                <span class="ml-5 pl-5">Lives <br>
+                Impacted
+                </span>
+            </div>
+            <div class="volunteer-donate-btn">
+                <button class="common-qause-btn white-bg-btn">Volunteer to help</button>
+                <button class="common-qause-btn ml-5 white-bg-btn">Donate to us</button>
+            </div> -->
+        </div>
+        <div class="col-xl-8 col-md-12 col-12">
+          <div class="row ngo-specialist align-items-center">
+            <div class="col-xl-9 col-md-8 col-12">
+              <p class="fz18"><i class="fa fa-star mr-4" aria-hidden="true"></i>{{profileDetails?.category?.name}}</p>
+              <p class="fz18"><i class="fa fa-star mr-4" aria-hidden="true"></i> <span class="fz20" *ngFor="let subCate of profileDetails?.category?.subCategories">{{subCate}}, </span></p>
+            </div>
+            <div class="col-xl-3 col-md-4 col-12">
+              <div class="d-flex align-items-center">
+                <p class="fz20 text-capitalize d-flex align-items-center">
+                  <img src="/assets/images/qause/homepage/ngo-profile/qause-verified-icon.png" class="img-fluid mr-4"
+                    alt="">
+                  Qause Verified</p>
+                <i class="fa fa-exclamation-circle ml-4" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- <div class="col-md-3 text-right">
+              <p-dropdown [options]="cities" [(ngModel)]="selectedCity"
+              placeholder="Select a City" optionLabel="name" [showClear]="false">
+            </p-dropdown>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="ngo-banner-inner" *ngIf="profileDetails?.images?.cover">
+        <img src="{{imgUrl}}/{{profileDetails?.images?.cover}}">
+      </div>
+    </div>
+  </div>
+</div>
+</div>

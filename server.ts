@@ -85,7 +85,7 @@ const fs = require('fs');
 const path = require('path');
 
 // index from browser build!
-const template = fs.readFileSync(path.join('.', 'dist/angular-universal/browser', 'index.html')).toString();
+const template = fs.readFileSync(path.join('.', 'dist/Angular-Universal/browser', 'index.html')).toString();
 
 // for mock global window by domino
 const win = domino.createWindow(template);
@@ -109,7 +109,7 @@ global['Event']['prototype'] = win.Event.prototype;
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/angular-universal/browser');
+  const distFolder = join(process.cwd(), 'dist/Angular-Universal/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)

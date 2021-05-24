@@ -1,0 +1,119 @@
+<!-- <div class="ngo-inspiring-wrap">
+  <div class="container">
+     <div class="ngo-inspiring-wrap-info text-center">
+        <h1 class="blue-color main-title mb-5">Inspiring Stories</h1>
+        <p>It is a long established fact that a reader will be distracted
+           by the readable content of a page when looking at its layout.
+        </p>
+        <div class="custom-arrow-btn d-flex justify-content-center align-items-center">
+           <button (click)="prev()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+           <span>Tap to know more stories</span>
+           <button (click)="next()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </div>
+     </div>
+  </div>
+  <swiper [slidesPerView]="4" [spaceBetween]="50" [loop]="false" [navigation]="true"
+  [pagination]="false" class="ngo-inspiring-story-main" [class.storyJustify]="ngoStories.length < 4">
+  <ng-template swiperSlide *ngFor="let story of ngoStories; let i=index">
+     <div class="ngo-inspiring-slider-inner">
+        <figure>
+           <img src="https://qauseuat.s3.amazonaws.com/ngo/story/{{story.image.primary}}" class="img-fluid" (click)="viewStory(story)">
+        </figure>
+        <div class="insipring-inner-story">
+           <!-- <div class="featured-story">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <span>FEATURED
+                STORY</span>
+              </div> -->
+           <!-- <div class="share-story">
+              <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+           </div>
+           <div class="inner-story-info">
+              <p class="mb-0">{{story.title}}</p>
+           </div>
+        </div>
+        <div class="inspiring-story-open">
+           <h3 class="story-child-name fz22">Anil’s Story</h3>
+           <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+     </div>
+  </ng-template>
+  </swiper>  -->
+  <!-- view story -->
+<div class="ngo-inspiring-wrap">
+ <div class="inspiring-story-open-inner">
+  <h1 class="blue-color main-heading mb-5 text-center">Inspiring Stories</h1>
+   <div class="container">
+     <div class="ngo-inspiring-wrap-info text-center">
+       <p>It is a long established fact that a reader will be distracted
+         by the readable content of a page when looking at its layout.
+       </p>
+       <div class="custom-arrow-btn d-flex justify-content-center align-items-center">
+          <button (click)="prev()" [class.btn-disable]="count == 0"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+          <span>Tap to know more stories</span>
+          <button (click)="next()" [class.btn-disable]="count == this.profileDetails.stories.length-1"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+        </div>
+       <!-- <div class="custom-arrow-btn d-flex justify-content-center align-items-center">
+         <button (click)="prev()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+         <span>Tap to know more stories</span>
+         <button (click)="next()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+       </div> -->
+     </div>
+   </div>
+   <div class="container">
+     <div class="ngo-inspiring-story-main-box">
+     <!-- <div class="ngo-inspiring-border"></div> -->
+     <swiper [slidesPerView]="1" [navigation]="true" [loop]="true" [pagination]="false"
+       class="ngo-inspiring-story-main">
+       <ng-template swiperSlide *ngFor="let story of ngoStories; let i=index">
+         <div class="row">
+           <div class="col-md-6 col-12 ">
+             <div class="story-open-img">
+               <!-- <gallery id="basic-test1"[items]="ngoItems" [itemTemplate]="itemTemplate1" [gestures]="false"></gallery> -->
+               <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="img-fluid"></ngx-gallery>
+             </div>
+           </div>
+           <div class="col-md-6 col-12 ">
+             <div class="inspiring-story-open-content">
+               <h3>{{story.title}}</h3>
+               <hr>
+               <p>
+                 <p-editor name="desc" [(ngModel)]="story.desc" [readonly]="true">
+                   <p-header></p-header>
+                 </p-editor>
+               </p>
+               <ul class="mt-5">
+                 <li class="pr-5" *ngFor="let tag of story.tag"><i class="fa fa-star" aria-hidden="true"></i>{{tag}} </li>
+                 <!-- <li class="ml-5"><i class="fa fa-star" aria-hidden="true"></i>{{profileDetails.category.subCategories}}
+                 </li> -->
+               </ul>
+               <!-- <button class="btn support-btn">support</button> -->
+               <!-- <div class="share-social d-flex justify-content-between">
+                    <button class="btn fb"><i class="fa fa-facebook" aria-hidden="true"></i>Share on Facebook</button>
+                    <button class="btn wtsap"><i class="fa fa-whatsapp" aria-hidden="true"></i>Share on Whatsapp</button>
+                    </div> -->
+               <div class="share-social d-flex justify-content-between">
+                 <!-- <button class="btn fb"><i class="fa fa-facebook" aria-hidden="true"></i>Share on Facebook</button> -->
+                 <!-- <a href=
+                       "https://web.whatsapp.com:/send?text=message: https://qause.com/"
+                       data-action="share/whatsapp/share"
+                       target="_blank">
+                       <button class="btn wtsap"><i class="fa fa-whatsapp" aria-hidden="true"></i>Share on Whatsapp</button>
+                       </a> -->
+                 <!-- <share-button [button]="'facebook'" [autoSetMeta]="false"
+                   [description]="'Qause - Inspiring Change Uplift Humanity'" [showText]="true"
+                   [url]="'http://qause.com/'" [text]="'Share on Facebook'" class="fb"></share-button>
+                 <share-button [button]="'whatsapp'" [autoSetMeta]="false"
+                   [description]="'Qause - Inspiring Change Uplift Humanity'" [showText]="true"
+                   [text]="'Share on Whatsapp'" class="wtsap"></share-button> -->
+               </div>
+             </div>
+           </div>
+         </div>
+       </ng-template>
+     </swiper>
+   </div>
+  </div>
+ </div>
+</div>
+

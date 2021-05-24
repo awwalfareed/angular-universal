@@ -1,0 +1,62 @@
+.main-heading{
+    color: #1e1e1e;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.volunteer-feature-bg{
+    background: url(/assets/images/homepage/why-ngo-volunteer-bg.jpg)no-repeat center ;
+    height: 850px;
+}
+.volunteer-feature-content{
+    position: absolute;
+    max-width: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.volunteer-feature-content h2{
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.readmore{
+    font-size: 2rem;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-decoration: underline !important;
+}
+.yellow-btn{
+    background: #f7a212;
+    padding: 14px 24px;
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: -4px 4px #b2772ec9;
+    transition: .3s ease;
+    border: 0;
+}
+@media (max-width:1024px) {
+    .volunteer-feature-bg{
+        background-size: contain;
+        height: 500px;
+    }
+}
+    @media (max-width:767px) {
+        .main-heading{
+            padding: 0 15px;
+            font-size: 4rem;
+        }
+        .volunteer-feature-content h2{
+            font-size: 4rem;
+            max-width: 370px;
+        }
+        .volunteer-feature-bg{
+            height: 330px;
+            background-size: cover;
+        }
+    }

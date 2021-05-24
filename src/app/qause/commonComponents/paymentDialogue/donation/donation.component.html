@@ -1,0 +1,84 @@
+ <div class="donation-modal">
+  <div>
+    <p-header class="text-center">
+      <h4>Be Proud!</h4>
+      <p>You’ve made a decision to bring significant change in someone’s life!</p>
+    </p-header>
+    <div class="modal-form">
+      <form action="">
+        <div class="input-group d-block">
+          <label>Enter Donation Amount*</label>
+          <div class="d-md-flex d-sm-block align-items-center">
+            <div class="d-flex align-items-center">
+              <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name" class="rupee-dropdown position-relative"></p-dropdown>
+            <input type="text" class="rupee-input" placeholder="ex 200">
+          </div>
+          <div class="payment-category">
+            <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
+          </div>
+          </div>
+          <span>Big or small, your contribution goes a long way</span>
+        </div>
+        <div class="input-group d-block mt-5">
+          <div>
+            <input type="text" class="w-100">
+          </div>
+         <div class="mt-3">
+          <div class="p-field-checkbox">
+            <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
+            <label for="ny" class="ml-3">I would like to make my donation anonymously</label>
+        </div>
+         </div>
+        </div>
+        <div class="d-block mt-5">
+          <label>Continue As a Guest*</label>
+          <div class="ui-inputgroup d-flex align-items-center">
+            <span class="ui-inputgroup-addon mt-0"><i class="pi pi-envelope"></i></span>
+            <input type="text" pInputText placeholder="Email id" class="w-100">
+
+        </div>
+        <span class="text-right">Already have an account? <a>Login</a> or <a>Sign Up</a></span>
+        </div>
+        <div class="input-group d-block mt-5">
+          <label>Mobile Number (Optional)</label>
+          <div class="input-group field-wrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-phone mx-auto" aria-hidden="true"></i></span>
+            </div>
+             <p-dropdown  name="selectedCode" filter="true"
+              filterBy="value" class="mobile-dopdown">
+              <ng-template let-item pTemplate="selectedItem">
+                <img src="assets/images/countryFlags/{{
+                    item.label | lowercase
+                  }}.png" style="width: 16px; vertical-align: middle" />
+                <span style="vertical-align: middle; margin-left: 0.5em">+{{ item.value }}</span>
+              </ng-template>
+              <ng-template let-car pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative; height: 25px">
+                  <img src="assets/images/countryFlags/{{
+                      car.label | lowercase
+                    }}.png" style="width: 24px; position: absolute; top: 1px; left: 5px" />
+                  <div style="font-size: 14px; float: right; margin-top: 4px">
+                    +{{ car.value }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <input type="number" class="form-control" placeholder="Mobile Number *" required />
+
+          </div>
+        </div>
+        <div class="modal-bottom-content text-center mt-5">
+          <p>Did you know that when you donate to other online giving platforms,
+             a sizable chunk (usually in excess of 9%) gets deducted from your donation?</p>
+             <span>Not at Qause!</span>
+             <h5>We assure 0% deduction from your donation, so that the entire amount reaches the beneficiary.</h5>
+
+        </div>
+      </form>
+    </div>
+</div>
+<p-footer class="text-center w-100">
+  <button class="d-block text-center">Yes, I want to make a difference</button>
+ </p-footer>
+</div>

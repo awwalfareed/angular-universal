@@ -1,0 +1,30 @@
+<div id="carouselExampleIndicators" class="hero-banner carousel slide mt-5" data-ride="carousel">
+   <div class="container">
+   <!-- Indicators -->
+   <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" *ngFor="let ngo_slide of ngoSlider; let i=index" [attr.data-slide-to]="i" [ngClass]="{'active': i == 0}"></li>
+  </ol>
+   </div>
+   <div class="carousel-inner"> 
+    <div class="carousel-item" *ngFor="let ngo_slide of ngoSlider; let i=index" [ngClass]="{'active': i == 0}">
+      <figure>
+      <img src="assets/images/qause/homepage/{{ngo_slide.image}}" class="img-fluid" alt="First slide">
+    </figure>
+      <div class="container">
+        <div class="hero-banner-content">
+          <img src="assets/images/qause/homepage/{{ngo_slide.ngo_logo_image}}" class="img-fluid ngo-logo">
+          <h3>{{ngo_slide.title}}</h3>
+          <div>
+            <a href="" class="readmore"
+              >Read their story <i class="fa fa-caret-right"></i
+            ></a>
+          </div>
+          <div class="d-flex btn-grp">
+          <button class="blue-btn ml-2 mr-2 border-0">Free Register</button>
+          <button class="blue-btn ml-2 mr-2 border-0">Donate</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

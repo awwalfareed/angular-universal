@@ -1,0 +1,159 @@
+<div class="ngo-about-tab-wrap" *ngIf="profileDetails?.founder?.image">
+<div class="container">
+        <div class="container">
+           <ul class="nav nav-pills nav-fill">
+              <li class="nav-item">
+                 <a class="nav-link active" href="#founder" data-toggle="tab">Founder</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="#ngo" data-toggle="tab">NGO</a>
+              </li>
+              <li class="nav-item">
+                 <a class="nav-link" href="#contact" data-toggle="tab">Contact</a>
+              </li>
+           </ul>
+           <div class="tab-content">
+              <div class="tab-pane active" role="tabpanel" id="founder" *ngIf="profileDetails?.founder?.image">
+                 <div class="content_section">
+                    <div class="row">
+                       <div class="col-md-4 col-12">
+                             <div class="text-center founder_img">
+                              <img src="{{imgUrl}}/{{profileDetails?.founder?.image}}" class="mb-4 img-fluid">
+                                 <h5 class="founder-name fz20 text-center">{{profileDetails?.founder?.name}}</h5>
+                                 <p class="founder-designation text-center fz18">( Founder & Managing Director )</p>
+                              </div>
+                           </div>
+                       <div class="col-md-8 col-12">
+                          <div class="founder_text">
+                             <h3>From the Founder’s Diary</h3>
+                             <p class="mt-4 m-0">
+                              <p-editor
+                              name="desc"
+                              [(ngModel)]="profileDetails.founder.bio"
+                              [readonly]="true">
+                              <p-header></p-header>
+                             </p-editor>
+                             </p>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="tab-pane " role="tabpanel" id="ngo">
+                 <div class="content_section">
+                  <div class="row">
+                     <div class="col-md-4 col-12">
+                        <div class="ngo-logo">
+                           <img src="{{imgUrl}}/{{profileDetails?.images?.logo}}" class="img-fluid">
+                        </div>
+                        </div>
+                        <div class="col-md-8 col-12">
+                           <div class="founder_text">
+                              <p class="mt-5 mb-0" *ngIf="profileDetails?.story?.text"><p-editor
+                                 name="desc"
+                                 [(ngModel)]="profileDetails?.story.text"
+                                 [readonly]="true"
+                               >
+                                 <p-header style="display: none;"></p-header>
+                               </p-editor></p>
+                           </div>
+                        </div>
+                        </div>
+                 </div>
+                 <!-- <ul class="ngo-viewdetail-pdf d-flex justify-content-between mt-5">
+                    <li><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>Trust</li>
+                    <li><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>80G</li>
+                    <li><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>12G</li>
+                    <li><span><i class="fa fa-file-text-o" aria-hidden="true"></i></span>fcra</li>
+                </ul> -->
+              </div>
+              <div class="tab-pane" role="tabpanel" id="contact">
+                 <div class="contacttab">
+                    <div class="row">
+                       <div class="col-md-5 col-12" *ngIf="isMask">
+                          <div class="contacttab_box">
+                             <h4 class="fz20 blue-color">Write us at:</h4>
+                             <a href="#">{{unmaskContactDetail?.publicEmail}}</a>
+                          </div>
+                          <div class="contacttab_box mt-5">
+                             <h4 class="fz20 blue-color">Call us at:</h4>
+                             <a href="#">{{unmaskContactDetail?.publicMobile}}</a>
+                          </div>
+                          <div class="contacttab_box mt-5" *ngIf="unmaskContactDetail?.ownWebsite">
+                             <h4 class="fz20 blue-color">Website:</h4>
+                             <a href="{{unmaskContactDetail?.ownWebsite}}">{{unmaskContactDetail?.ownWebsite}}</a>
+                          </div>
+                       </div>
+                       <div class="col-md-5" *ngIf="!isMask">
+                        <div class="contacttab_box">
+                           <h4 class="fz20 blue-color">Write us at:</h4>
+                           <a href="#">{{profileDetails?.publicEmail}}</a>
+                        </div>
+                        <div class="contacttab_box mt-5">
+                           <h4 class="fz20 blue-color">Call us at:</h4>
+                           <a href="#">{{profileDetails?.publicMobile}}</a>
+                        </div>
+                        <div class="contacttab_box mt-5" *ngIf="profileDetails?.ownWebsite">
+                           <h4 class="fz20 blue-color">Website:</h4>
+                           <a>{{profileDetails?.ownWebsite}}</a>
+                        </div>
+                     </div>
+                       <div class="col-md-7 col-12">
+                          <div class="contacttab_content">
+                             <h4 class="fz20 blue-color">Find us at:</h4>
+                             <p class="text-capitalize">
+                                 <span *ngIf="profileDetails?.address?.formattedAddress">{{profileDetails?.address?.formattedAddress}},&nbsp;</span>
+                                 <span *ngIf="profileDetails?.address?.city">{{profileDetails?.address?.city}},&nbsp;</span>
+                                 <span *ngIf="profileDetails?.address?.state">{{profileDetails?.address?.state}},&nbsp;</span>
+                                 <span *ngIf="profileDetails?.address?.country">{{profileDetails?.address?.country}}</span>.
+                             </p>
+                             <a *ngIf="!isUserLoggedIn" class="register-to-unlock btn btn-bg-orange mt-5 mb-5"
+                               (click)="show()">Register to Unlock</a>
+                             <a *ngIf="!isRefresh" class="register-to-unlock btn-bg-orange btn mt-5 mb-5"
+                               (click)="getUnmask()">Unlock</a>
+                            <ul class="mt-5 social-icon lock-social-icon" *ngIf="!isMask">
+                                <li *ngIf=profileDetails?.social?.instagram>
+                                   
+                                    <img src="/assets/images/qause/homepage/ngo-profile/instagram-lock-icon.svg">
+                                 
+                              </li>
+                                <li *ngIf=profileDetails?.social?.facebook>
+                                   
+                                    <img src="/assets/images/qause/homepage/ngo-profile/facebook-lock-icon.svg">
+                                 
+                              </li>
+                                <li *ngIf=profileDetails?.social?.youtube>
+                                   
+                                    <img src="/assets/images/qause/homepage/ngo-profile/youtube-lock-icon.svg">
+                                 
+                              </li>
+                             </ul>
+                             <ul class="mt-5 social-icon lock-social-icon unlock-social-icon" *ngIf="isMask">
+                              <li *ngIf=profileDetails?.social?.instagram>
+                                 <a href="https://www.instagram.com/{{profileDetails?.social?.instagram}}" target="_blank">
+                                  <img src="/assets/images/qause/homepage/ngo-profile/instagram-icon.svg" class="img-fluid">
+                               </a>
+                            </li>
+                              <li *ngIf=profileDetails?.social?.facebook>
+                                 <a href="https://www.facebook.com/{{profileDetails?.social?.facebook}}" target="_blank">
+                                    <img src="/assets/images/qause/homepage/ngo-profile/facebook-icon.svg" class="img-fluid">
+
+                               </a>
+                            </li>
+                              <li *ngIf=profileDetails?.social?.youtube>
+                                 <a href="https://www.youtube.com/{{profileDetails?.social?.linkedin}}" target="_blank">
+                                    <img src="/assets/images/qause/homepage/ngo-profile/youtube-icon.svg" class="img-fluid">
+
+                               </a>
+                            </li>
+                           </ul>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+    </div>
+</div>
+

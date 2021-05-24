@@ -1,0 +1,253 @@
+/* modal-1 */
+::ng-deep .ui-dialog .ui-dialog-titlebar-icons{
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    background: #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+  }
+  ::ng-deep .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+    margin: 0 !important;
+    color: #fff !important;
+    opacity: 1;
+    font-size: 1.2rem;
+  }
+  .donation-modal label{
+    font-size: 1.6rem;
+    color: #1A1A1A;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+ .donation-modal span{
+    font-size: 1.4rem;
+    color: #1A1A1A;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    display: block;
+  }
+  .donation-modal a{
+    font-size: 1.4rem;
+    color: #1A1A1A;
+    font-weight: 600;
+    text-decoration: underline !important;
+  }
+  ::ng-deep .ui-dialog .ui-dialog-titlebar{
+    padding: 0 !important;
+    border: 0 !important;
+  }
+  ::ng-deep .ui-dialog .ui-dialog-titlebar{
+    background: #F2F5F6;
+    color: #F7A212;
+    font-weight: 700;
+  }
+  ::ng-deep .ui-dialog p-header{
+    font-size: 3.3rem;
+    padding: 15px 0 !important;
+    color: #F7A212;
+    display: block;
+    background: #F2F5F6 !important;
+  }
+  ::ng-deep .ui-dialog p-header h4{
+    font-size: 3.3rem;
+     font-weight: 700;
+     letter-spacing: 1px;
+  }
+  ::ng-deep .ui-dialog p-header p{
+    margin-top: 10px;
+     display: block;
+     font-size: 2rem;
+     color: #F7A212;
+     letter-spacing: 1px;
+     font-weight: 700;
+  }
+  ::ng-deep .ui-dialog {
+     border: 0;
+     max-width: 733px !important;
+     width: 100% !important;
+  }
+  .rupee-icon{
+    position: absolute;
+     top: 34px;
+     left: 15px;
+     z-index: 1;
+  }
+  ::ng-deep .rupee-dropdown .ui-dropdown{
+    border-radius: 0;
+    min-width: auto;
+    width: 80px;
+    height: 42px;
+    border-right: 0 !important;
+  }
+ 
+  .donation-modal input{
+    height: 42px;
+     border: 1px solid #707070;
+     padding-left: 15px;
+     color: #1A1A1A;
+     font-weight: 500; 
+     font-size: 1.6rem;
+  }
+  input::-webkit-input-placeholder { /* Edge */
+     color: #1A1A1A;
+     font-weight: 500; 
+     font-size: 1.6rem;
+  }
+  
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color: #1A1A1A;
+     font-weight: 500; 
+     font-size: 1.6rem;
+  }
+  
+  input::placeholder {
+     color: #1A1A1A;
+     font-weight: 500; 
+     font-size: 1.6rem;
+  }
+  .rupee-input{
+    border-left: 0;
+  }
+  ::ng-deep .rupee-dropdown .ui-dropdown .ui-dropdown-trigger{
+     line-height: inherit;
+  }
+  :host >>> .ui-dialog .ui-dialog-content{
+    padding: 0 !important;
+  }
+  ::ng-deep .ui-dialog .modal-form{
+    padding: 40px 70px !important;
+    background-color: #F5F9FB !important;
+    border: 0 !important;
+    border-top: 1px solid #707070 !important;
+  }
+  ::ng-deep .rupee-dropdown .ui-dropdown .ui-dropdown-label{
+     padding-left: 30px;
+  }
+  ::ng-deep .rupee-dropdown .ui-dropdown .ui-dropdown-trigger::before{
+    content: "\f156";
+     display: block;
+     position: absolute;
+     top: 7px;
+     left: -41px;
+     font-family: 'FontAwesome';
+     font-size: 2rem;
+     color: #262626;
+  }
+  ::ng-deep .ui-dropdown{
+    height: 42px;
+    border: 1px solid #707070 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ::ng-deep .ui-dropdown input.ui-dropdown-label{
+    cursor: default;
+    height: 42px;
+    background: transparent;
+    color: #1A1A1A;
+     font-weight: 500;
+     font-size: 1.6rem;
+  }
+  :host >>> .payment-category .ui-dropdown input.ui-dropdown-label{
+     color: #253DC0;
+     font-weight: bold;
+  }
+  ::ng-deep .ui-dropdown input.ui-dropdown-label
+  ::ng-deep .pi-chevron-down:before{
+    color: #262626;
+    font-size: 2rem;
+  }
+  :host >>> .payment-category .ui-dropdown{
+     width: 100%;
+     min-width: 100%;
+     margin-left: 20px;
+  }
+  ::ng-deep .ui-chkbox .ui-chkbox-box{
+     border: 1px solid #707070;
+  }
+  ::ng-deep .p-field-checkbox label{
+    font-size: 1.4rem;
+    color: #1A1A1A;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  ::ng-deep .ui-inputgroup-addon{
+    height: 42px;
+    width: 60px;
+    background: #fff !important;
+    border: 1px solid #707070 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+  ::ng-deep .ui-inputgroup-addon .pi-envelope{
+    color: #253DC0;
+     margin-top: 7px;
+     font-weight: bold;
+     font-size: 2rem;
+  }
+  ::ng-deep .donation-modal p-footer{
+    background: #253DC0;
+    border: 0;
+    padding: 30px 100px;
+    display: block;
+    margin: 0 !important;
+  }
+  ::ng-deep .donation-modal p-footer button{
+    width: 100%;
+    background: transparent;
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+  }
+  .donation-modal .modal-bottom-content p{
+    font-size: 1.4rem;
+    color: #262626;
+    font-weight: 700;
+  }
+  .donation-modal .modal-bottom-content span{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #253DC0;
+    margin-top: 20px;
+  }
+  .donation-modal .modal-bottom-content h5{
+    color: #262626;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  @media (max-width:1024px){
+    ::ng-deep .ui-dialog .modal-form{
+      padding: 40px 50px !important;
+    }
+  }
+  @media (max-width:991px){
+    ::ng-deep .ui-dialog .ui-dialog-titlebar-icons{
+      right: 0;
+    }
+    ::ng-deep .ui-dialog{
+      max-width: 100%;
+    }
+    ::ng-deep .ui-dialog .modal-form{
+        padding: 15px !important;
+    }
+    :host >>> .payment-category .ui-dropdown{
+      margin-top: 10px;
+      margin-left: 0;
+    }
+    ::ng-deep .donation-modal input{
+      width: 100%;
+    }
+    ::ng-deep .donation-modal p-footer{
+      padding: 30px 50px;
+    }
+  } 

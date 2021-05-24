@@ -1,0 +1,106 @@
+::ng-deep .ui-dialog .ui-dialog-titlebar-icons{
+   position: absolute;
+   right: -7px;
+   top: -7px;
+   background: #000;
+   border-radius: 50%;
+   width: 30px;
+   height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 9;
+   outline: 0 !important;
+   box-shadow: none !important;
+ }
+ ::ng-deep .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+   margin: 0 !important;
+   color: #fff !important;
+   opacity: 1;
+   font-size: 1.2rem;
+   outline: 0 !important;
+   box-shadow: none !important;
+ }
+ ::ng-deep .ui-dialog {
+   border: 0;
+   max-width: 723px !important;
+   width: 100% !important;
+}
+  ::ng-deep .ui-inputgroup-addon{
+    height: 42px;
+    width: 60px;
+    background: #fff !important;
+    border: 1px solid #707070 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+  ::ng-deep .ui-inputgroup-addon .pi-envelope{
+    color: #253DC0;
+     margin-top: 7px;
+     font-weight: bold;
+     font-size: 2rem;
+  }
+input::-webkit-input-placeholder { /* Edge */
+    color: #1A1A1A;
+    font-weight: 500; 
+    font-size: 1.6rem;
+ }
+ 
+ input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #1A1A1A;
+    font-weight: 500; 
+    font-size: 1.6rem;
+ }
+ 
+ input::placeholder {
+    color: #1A1A1A;
+    font-weight: 500; 
+    font-size: 1.6rem;
+ }
+.thank-you-inner{
+    border: 5px solid #BA973B;
+    padding: 30px;
+ }
+::ng-deep .ui-dialog .ui-dialog-titlebar{
+    background: #fff;
+    padding: 0 !important;
+ }
+ 
+ ::ng-deep .ui-dialog .ui-dialog-content{
+    background: #fff;
+    border: 0 !important;
+    text-align: center;
+    z-index: -1;
+  } 
+  .thank-you-inner p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #262626;
+    letter-spacing: 1px;
+  }
+  .thank-you-inner p a{
+     color: #253DC0;
+     font-weight: bold;
+ }
+ .thank-you-inner h5{
+     font-size: 1.7rem;
+     font-weight: 700;
+     color: #262626;
+     letter-spacing: 1px;
+ }
+ .thank-you-inner button{
+    margin-top: 50px;
+     border: 0;
+     background: transparent;
+     font-size: 1.6rem;
+     letter-spacing: 1px;
+     font-weight: bold;
+ }
+ @media (max-width:991px){
+   ::ng-deep .ui-dialog{
+     max-width: 100%;
+   }
+   ::ng-deep .ui-dialog .ui-dialog-titlebar-icons{
+      right: 0;
+    }
+ } 

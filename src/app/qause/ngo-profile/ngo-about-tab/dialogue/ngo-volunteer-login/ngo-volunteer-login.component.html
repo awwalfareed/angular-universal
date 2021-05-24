@@ -1,0 +1,160 @@
+<section *ngIf="!isSelectedNGOTab && !isSelectedVolunteer" class="volunteer-modal">
+  <div class="col-md-12">
+    <h1 class="text-center m-auto mt-5">Choose your intent or involvement based on the options below</h1>
+    <div class="row mt-5">
+      <div class="col-md-6" (click)="selectNGO('volunteer')">
+        <div class="register-unlock-ngo-box text-center">
+          <img src="/assets/images/qause/homepage/ngo-profile/register-unlock-volunteer.svg">
+          <h3 class="mt-4">Volunteer</h3>
+          <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+        </div>
+      </div>
+      <div class="col-md-6" (click)="selectNGO('ngo')">
+        <div class="register-unlock-ngo-box text-center">
+          <img src="/assets/images/qause/homepage/ngo-profile/register-unlock-ngo.svg">
+          <h3 class="mt-4 text-uppercase">NGO</h3>
+          <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGO Login -->
+<section class="login-dialogue-wrap" *ngIf="isSelectedNGOTab">
+  <div class="common-content-wrap ngo-otp-verificaion" *ngIf="showNGOLogin">
+    <div class="logo-w-90 mt-4 mb-5">
+      <img src="/assets/images/qause-logo.png" alt="Qause" class="img-fluid" />
+    </div>
+    <div class="verify-number mt-md-5 mt-5">
+      <form #loginForm="ngForm" (submit)="onLogin(loginForm)">
+        <p class="fz30 fw500 pt-3 mb-5 text-center">Login Detail</p>
+        <div *ngIf="show">
+          <label for="" class="common-label">Email Address</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            </div>
+            <input (keyup)="errors=''" type="text" class="form-control" placeholder="Your Email Address" name="ngoemail"
+              [(ngModel)]="model.ngoemail" #userEmail="ngModel" [ngClass]="{
+                  'is-invalid':
+                    (userEmail.errors && userEmail.touched && !userEmail.value) ||
+                    (errors?.email && userEmail.touched) ||
+                    userEmail.errors?.pattern
+                }" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
+            <div class="invalid-feedback fz16" [hidden]="!userEmail.errors?.pattern">
+              Use a Valid Email.
+            </div>
+            <div class="invalid-feedback fz16" [hidden]="!errors?.email">
+              {{ errors?.email }}
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!show">
+          <label for="" class="common-label">Mobile Number</label>
+          <div class="input-group my-group">
+            <p-dropdown [options]="items" [(ngModel)]="selectedCode" name="selectedCode" filter="true" filterBy="value"
+              class="mobile-dopdown">
+              <ng-template let-item pTemplate="selectedItem">
+                <img src="assets/images/countryFlags/{{
+                      item.label | lowercase
+                    }}.png" style="width: 16px; vertical-align: middle" />
+                <span style="vertical-align: middle; margin-left: 0.5em">+{{ item.value }}</span>
+              </ng-template>
+              <ng-template let-car pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative; height: 25px">
+                  <img src="assets/images/countryFlags/{{
+                        car.label | lowercase
+                      }}.png" style="width: 24px; position: absolute; top: 1px; left: 5px" />
+                  <div style="font-size: 14px; float: right; margin-top: 4px">
+                    +{{ car.value }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <input (keyup)="errors=''" type="number" placeholder="Your mobile number" name="ngomobileno"
+              [(ngModel)]="model.mobileno" #userMobile="ngModel" required [ngClass]="{
+                  'is-invalid':
+                    (userMobile.errors &&
+                      userMobile.touched &&
+                      !userMobile.value) ||
+                    (errors?.mobile && userMobile.touched) ||
+                    userMobile.errors?.minlength
+                }" />
+            <div class="invalid-feedback fz16" [hidden]="!userMobile.errors?.minlength">
+              Use a valid Mobile Number
+            </div>
+            <div class="invalid-feedback fz16" [hidden]="!errors?.mobile">
+              {{ errors?.mobile }}
+            </div>
+          </div>
+        </div>
+        <h3 (click)="toggle()" class="toggleBtn">{{ buttonName }}</h3>
+        <button pButton type="submit" label="Request OTP" class="border-radius4px btn-box-shadow"
+          [disabled]="!loginForm.valid"></button>
+        <p class="text-center text-muted mt-3 pb-4">Are you new?
+          <a class="text-dark" (click)="ngoSingup()">Signup NGO</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- Verify NGO -->
+  <div *ngIf="verifyNGOOTP">
+    <app-ngo-login-verify></app-ngo-login-verify>
+  </div>
+  <!-- NGO Register -->
+  <div *ngIf="registerNGO" class="register-dialogue-main">
+    <app-ngo-register-dialogue (messageEvent)="receiveMessage($event)"></app-ngo-register-dialogue>
+  </div>
+  <!-- NGO Register verify -->
+  <div *ngIf="registerNGOVerify">
+    <app-ngo-register-verify-dialogue></app-ngo-register-verify-dialogue>
+  </div>
+</section>
+<!-- Volunteer Login -->
+<section class="ngo-volunteer-login text-center" *ngIf="isSelectedVolunteer">
+  <h1>Volunteer is in Development</h1>
+  <!-- <h1 class="main-heading">Create Account</h1>
+  <div class="volunteer-login-img">
+   <img src="assets/images/qause/homepage/ngo-profile/phone-icon.png" class="img-fluid mt-5 mb-5">
+  </div>
+    <p>Enter Your mobile number <br> to create account</p>
+    <span class="mt-5 mb-5 d-block">We will send you one time <br> password (OTP)</span>
+    <div class="input-group my-group">
+      <p-dropdown [options]="items" [(ngModel)]="selectedCode" name="selectedCode" filter="true" filterBy="value"
+        class="mobile-dopdown">
+        <ng-template let-item pTemplate="selectedItem">
+          <img src="assets/images/countryFlags/{{
+                item.label | lowercase
+              }}.png" style="width: 16px; vertical-align: middle" />
+          <span style="vertical-align: middle; margin-left: 0.5em">+{{ item.value }}</span>
+        </ng-template>
+        <ng-template let-car pTemplate="item">
+          <div class="ui-helper-clearfix" style="position: relative; height: 25px">
+            <img src="assets/images/countryFlags/{{
+                  car.label | lowercase
+                }}.png" style="width: 24px; position: absolute; top: 1px; left: 5px" />
+            <div style="font-size: 14px; float: right; margin-top: 4px">
+              +{{ car.value }}
+            </div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+      <input (keyup)="errors=''" type="number" placeholder="Your mobile number" name="ngomobileno"
+        [(ngModel)]="model.mobileno" #userMobile="ngModel" required [ngClass]="{
+            'is-invalid':
+              (userMobile.errors &&
+                userMobile.touched &&
+                !userMobile.value) ||
+              (errors?.mobile && userMobile.touched) ||
+              userMobile.errors?.minlength
+          }" />
+      <div class="invalid-feedback fz16" [hidden]="!userMobile.errors?.minlength">
+        Use a valid Mobile Number
+      </div>
+      <div class="invalid-feedback fz16" [hidden]="!errors?.mobile">
+        {{ errors?.mobile }}
+      </div>
+    </div>
+    <button pButton type="button" label="Send" class="ui-button-rounded" class="mt-5 btn-box-shadow"></button> -->
+</section>

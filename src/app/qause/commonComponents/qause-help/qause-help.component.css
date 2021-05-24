@@ -1,0 +1,146 @@
+.container-fluid {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+.main-heading{
+    color: #1e1e1e;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav{
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    justify-content: center;
+    margin: 0 auto 40px;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li{
+    border: 0 !important;
+    width: 100%;
+    text-align: center;
+    background: transparent !important;
+    border-bottom: 2px solid #e1e1e1 !important;
+    margin: 0;  
+    outline: 0;
+    box-shadow: none !important;
+}
+
+:host >>> .how-qause-help-wrap .ui-tabview .ui-tabview-nav li .ui-tabview-left-icon{
+    display: block;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li a{
+    color: #d5d5d5 !important;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active:hover{
+    border-bottom: 2px solid #e1e1e1;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active{
+    border-bottom: 4px solid #f7a212 !important;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active a{
+    color: #f7a212 !important;
+    font-weight: bold !important;
+}
+
+:host >>> .how-qause-help-wrap .pi-calendar:before{
+    content: '';
+    background: url(/assets/images/homepage/ngo-icon.png)no-repeat;
+    width: 56px;
+    height: 42px;
+    display: block;
+    margin: 0 auto 10px;
+    background-position: top;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active .pi-calendar:before{
+    background-position: bottom;
+}
+
+:host >>> .how-qause-help-wrap .pi-inbox:before{
+    content: '';
+    background: url(/assets/images/homepage/volunteer-icon.png)no-repeat;
+    width: 42px;
+    height: 44px;
+    display: block;
+    background-position: top;
+    margin: 0 auto 10px;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active .pi-inbox:before{
+    background-position: bottom;
+}
+:host >>> .how-qause-help-wrap .pi-user:before{
+    content: '';
+    background: url(/assets/images/homepage/donar-icon.png)no-repeat;
+    width: 46px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 10px;
+    background-position: top;
+}
+:host >>> .how-qause-help-wrap .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active .pi-user:before{
+    background-position: bottom;
+    height: 43px;
+}
+:host >>> .how-qause-help-wrap .ui-tabview .ui-tabview-panels{
+    border: 0;
+}
+:host >>> .ui-tabview .ui-tabview-panels .ui-tabview-panel{
+    margin-top: 10px;
+}
+:host >>>  .ui-tabview .ui-tabview-panels{
+    margin-top: 20px;
+}
+/* ngo-slider */
+.qause-help-ngo-item{
+    box-shadow: -7px -4px 8px -5px lightgrey;
+    padding: 35px 15px;
+    border-radius: 25px;
+    transition: 0.3s linear all;
+    height: 250px;
+}
+
+.qause-help-ngo-item p{
+    font-size: 1.6rem;
+    margin-top: 20px;
+    max-width: 150px;
+}
+.bigFont {
+    font-size: 111px;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    -webkit-text-stroke: 1px #f4a340;
+    position: absolute;
+    right: -14px;
+    z-index: 0;
+    bottom: 0;
+}
+:host >>> .how-qause-help-wrap .swiper-slide:nth-last-of-type(1) .qause-help-ngo-item p{
+    max-width: 100%;
+}
+@media (max-width:767px){
+    .container-fluid{
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+    .qause-help-ngo-item{
+        border: 1px solid rgb(225 225 225 / 50%);
+        display: block !important;
+        text-align: center;
+    }
+    .qause-help-ngo-item img{
+        display: block;
+        margin: 0 auto;
+    }
+    .qause-help-ngo-item p{
+        max-width: 100%;
+    }
+    .bigFont{
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+  
+}

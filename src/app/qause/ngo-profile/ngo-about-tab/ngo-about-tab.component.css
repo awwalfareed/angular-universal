@@ -1,0 +1,149 @@
+.btn-bg-green{
+    background: #28a745;
+}
+.ngo-about-tab-wrap{
+    margin-top: 310px;
+}
+/* tabs-styling-here */
+.ngo-about-tab-wrap ul.nav.nav-pills.nav-fill{
+    padding: 50px 0;
+}
+.ngo-about-tab-wrap .nav-pills .nav-link{
+    border-radius: 0;
+    border-bottom: 2px solid #ddd;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #565656;
+}
+.ngo-about-tab-wrap .nav-pills .nav-link.active, .tab_section.section .nav-pills .show>.nav-link{
+    color: #253dc0;
+    background-color: transparent;
+    font-weight: var(--fw-bold);
+    border-bottom: 3px solid #f7a212;
+    border-radius: 0;
+}
+
+.founder_img img{
+    border-radius: 10px;
+}
+.founder_text h3{
+    font-size: 4rem;
+    color: #1a1a1a;
+    font-weight: var(--fw-extrabold);
+    line-height: 25px;
+}
+.ngo-about-tab-wrap p{
+    line-height: 32px;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 2rem !important;
+}
+.founder-name{
+    color: var(--color-orange);
+    font-weight: var(--fw-bold);
+    text-transform: capitalize;
+}
+.founder-designation{
+    color: #b4b4b4 !important;
+}
+.ngo-viewdetail-pdf li{
+    display: inline-block;
+    text-align: center;
+    color: var(--color-orange);
+    font-size: 2.7rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+}
+.ngo-viewdetail-pdf li span{
+    display: block;
+    font-size: 3rem;
+}
+.contacttab h4{
+    font-weight: bold;
+    font-weight: var(--fw-bold);
+}
+.contacttab_box a{
+    color: #1a1a1a;
+    font-size: 2rem !important;
+    font-weight: var(--fw600);
+}
+.contacttab_content .btn{
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 2rem;
+}
+.btn-bg-orange{
+    background: #f7a212;
+}
+.btn-bg-green{
+    background: #03a010;
+}
+.btn-bg-blue{
+    background: #253dc0;
+}
+.social-icon li{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.social-icon li:nth-child(2){
+    margin: 0 15px ;
+}
+.social-icon li a{
+    display: block;
+}   
+
+.ngo-logo {
+    max-height: 340px;
+}
+.ngo-logo img{
+    height: 100%;
+}
+
+
+/* editor */
+:host >>> .ui-editor-container .ui-editor-content .ql-editor{
+    padding: 10px 15px 0 0;
+}
+:host >>> .ui-editor-container .ui-editor-content{
+    border: 0;
+    max-height: 306px;
+    overflow-y: scroll;
+}
+:host >>> .ui-editor-container .ui-editor-toolbar{
+    display: none;
+}
+:host >>> .ql-editor p ,
+:host >>> .ql-editor p > strong{
+    font-size: 1.8rem;
+    color: #212529;
+    line-height: 30px;
+    font-weight: 500;
+    background: transparent;
+}
+@media (max-width:1024px){
+    .ngo-about-tab-wrap{
+        margin-top: 200px;
+    }
+    .inspiring-story-open-inner{
+        padding-top: 70px;
+    }
+}
+@media (max-width:991px) {
+    .ngo-about-tab-wrap{
+        margin-top: 107px;
+    }
+    .founder_text , :host >>> .ql-editor p{
+        text-align: center;
+    }
+
+    .founder_text h3{
+        font-size: 3rem;
+    }
+  .contacttab{
+      text-align: center;
+  }
+
+}
+

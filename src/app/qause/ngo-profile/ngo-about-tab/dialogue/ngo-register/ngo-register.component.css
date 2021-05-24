@@ -1,0 +1,472 @@
+.register-dialogue-wrap {
+	overflow: hidden;
+}
+
+ ::ng-deep .register-dialogue-wrap .ui-dialog-titlebar {
+	border: 0 !important;
+	background: #fff !important;
+}
+::ng-deep .register-dialogue-main .ui-dialog .ui-dialog-content{
+    padding: 0 !important;
+  }
+
+.registered-dialogue {
+	background: #fff;
+	height: 100%;
+	box-shadow: 0px 0px 0px 0px #cec8c8;
+	padding: 30px;
+}
+
+.registered-dialogue .form-control {
+	border: none!important;
+	border-bottom: 2px solid #f7a212 !important;
+	border-radius: 0;
+	padding: 0;
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+.custom-domain-title {
+	color: #253dc0;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	font-weight: bold;
+	display: block;
+}
+
+.registered-dialogue .form-group {
+	margin-bottom: 2rem;
+}
+
+ ::-webkit-input-placeholder {
+	/* Edge */
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+ :-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+ ::placeholder {
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+ :host>>>.registered-dialogue .ui-dropdown {
+	border: 0;
+	border-bottom: 2px solid #f7a212;
+	width: 100%;
+	border-radius: 0;
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+
+/* ngo-signup */
+
+.page-wrapper {
+	min-height: 100vh;
+	width: 100%;
+	background: #f2f2f2;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 20px 15px;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.content-wrapper {
+	width: 100%;
+	max-width: 860px;
+	margin: auto;
+	padding: 6px;
+	border: 1px solid #e4e4e4;
+	background-color: #ffffff;
+	box-shadow: 0 0 20px 0px #bfbdbd;
+}
+
+.left-box {
+	width: 100%;
+	max-width: 380px;
+	background: #f2f2f2;
+	padding-top: 30px;
+}
+
+.contact-details {
+	margin-top: 40px;
+    border-bottom: 1px solid #ffffff;
+    padding: 0 30px;
+    padding-bottom: 18px;
+   
+}
+.contact-details a {
+	color: #272727;
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-decoration: none;
+	transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+}
+
+.contact-details a:hover {
+	color: #253dc0;
+}
+
+.left-box h3 {
+	font-size: 2.4rem;
+	color: #253dc0;
+	font-weight: 500;
+	line-height: 36px;
+	margin: 50px 0;
+}
+
+
+/* right box */
+
+.right-box {
+	width: 100%;
+    padding: 0px 15px 0px 0px;
+}
+
+.right-box>p {
+	font-size: 1.6rem;
+	color: #031c2c;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.field-wrap .form-control {
+	border: 1px solid #aaaaaa;
+	border-radius: 0 4px 4px 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1.4rem;
+	color: #636363;
+	padding: 0 15px;
+	background: transparent !important;
+	border-left: 0;
+}
+
+ :host>>>.ui-inputtext {
+	background-color: transparent;
+}
+
+ :host>>>.ui-dropdown .ui-dropdown-label {
+	font-size: 1.4rem;
+	color: #636363;
+	text-transform: capitalize;
+}
+
+ :host>>>.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item,
+body .ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group {
+	text-transform: capitalize;
+}
+
+ :host>>>.ui-dropdown:not(.ui-state-disabled):hover {
+	border: 1px solid #aaaaaa;
+	border-left: 0;
+}
+
+ :host>>>.form-control.is-invalid,
+.was-validated .form-control:invalid {
+	background-position: right calc(2.375em + 0.1875rem) center;
+}
+
+input:-internal-autofill-selected,
+.ng-invalid.ng-dirty.ng-touched {
+	background-color: transparent;
+}
+
+ :host>>>.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight,
+ :host>>>.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item-group.ui-state-highlight {
+	color: #000;
+	background-color: #e9ecef;
+}
+
+ ::-webkit-input-placeholder {
+	/* Edge */
+	color: #636363;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+ :-ms-input-placeholder {
+	/* Internet Explorer */
+	color: #636363;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+ ::placeholder {
+	color: #636363;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+.form-wrapper {
+	margin-top: 15px;
+}
+
+.field-wrap {
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.field-wrap .input-group-text {
+	width: 40px;
+	margin-right: 1px;
+	border-color: #aaaaaa;
+}
+
+.field-wrap .input-group-text i {
+	font-size: 18px;
+	color: #272727;
+}
+
+.field-wrap label {
+	color: #353636;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.term-service {
+	margin-bottom: 20px;
+}
+
+.already-sign-in {
+	display: block;
+	text-align: center;
+	font-size: 1.6rem;
+	color: #313131;
+	margin-top: 24px;
+	font-weight: 500;
+}
+
+.already-sign-in button {
+	border: none;
+	background: none;
+	transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	padding: 0;
+	outline: none;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.already-sign-in button:hover {
+	color: #f7a212;
+}
+
+.ngo-domain-name-fixed {
+	right: 0;
+	left: 0px;
+	padding-left: 55px;
+	top: 11px;
+	z-index: 4;
+	font-size: 1.4rem;
+	color: #080808;
+	font-weight: 500;
+	width: 100%;
+	display: block;
+}
+
+.inputloader-fixed {
+	right: 0;
+	left: -33px;
+	top: 8px;
+	position: relative;
+}
+
+.ngo-sub-domain {
+	padding-left: 140px !important;
+}
+
+ :host>>>.ui-dropdown {
+	min-width: auto !important;
+	width: 100% !important;
+	align-items: center;
+}
+
+ :host>>>.ui-dropdown {
+	border: 1px solid #aaaaaa;
+	height: 40px;
+	line-height: 40px;
+	font-size: 2rem;
+	color: #636363;
+	padding: 0 15px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: transparent !important;
+	border-left: 0 !important;
+}
+
+.mat-h1,
+.mat-headline,
+.mat-typography h1 {
+	font-size: 5.2rem;
+	font-weight: 300;
+	color: #4c4c4c;
+}
+
+ :host>>>.ui-dropdown {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	min-width: 23.9em;
+	height: 40px;
+	color: #636363;
+	font-size: 1.4rem;
+	font-weight: 500;
+	border-radius: 1px;
+	outline: none;
+	box-shadow: none;
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		-moz-transform: translatey(0);
+		-ms-transform: translatey(0);
+		-webkit-transform: translatey(0);
+		transform: translatey(0);
+	}
+	40% {
+		-moz-transform: translatey(-10px);
+		-ms-transform: translatey(-10px);
+		-webkit-transform: translatey(-10px);
+		transform: translatey(-10px);
+	}
+	60% {
+		-moz-transform: translatey(-5px);
+		-ms-transform: translatey(-5px);
+		-webkit-transform: translatey(-5px);
+		transform: translatey(-5px);
+	}
+}
+
+.btn-box-shadow,
+ :host>>>.ui-button:enabled:hover {
+	color: #fff;
+	max-width: 100%;
+	animation: bounce 5s linear infinite;
+	background: #eee !important;
+	color: #636363 !important;
+}
+
+.btn-box-shadow {
+	border-color: transparent !important;
+	color: #fff !important;
+	background: #253dc1 !important;
+	opacity: 1;
+}
+
+.btn-box-shadow:disabled {
+	background: #eee !important;
+	color: #636363 !important;
+}
+
+
+/* drop-down */
+
+ :host>>>.ui-dropdown {
+	width: 100% !important;
+	min-width: 5em !important;
+	background: none;
+	border: 1px solid #aaaaaa;
+	border-radius: 0;
+	border-right: 1px solid #aaaaaa !important;
+}
+
+ :host>>>.ui-dropdown.ui-dropdown-open {
+	min-width: 8em;
+}
+
+.mobile-dopdown span,
+input {
+	color: #636363;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+ :host>>>.input-group-text {
+	border: 1px solid #aaaaaa;
+}
+
+ :host>>>.ui-inputtext {
+	background-color: transparent;
+	padding-top: 0;
+}
+
+ :host>>>.ui-dropdown:not(.ui-state-disabled):hover {
+	border-left: 1px solid #aaaaaa;
+	border-color: #aaaaaa;
+}
+
+ :host>>>.ui-dropdown-panel .ui-dropdown-filter-container .ui-dropdown-filter-icon,
+ :host>>>.ui-dropdown .ui-dropdown-trigger .ui-dropdown-trigger-icon {
+	color: #636363;
+	font-size: 0.9em;
+}
+
+ :host>>>.ui-dropdown-panel .ui-dropdown-filter-container {
+	padding: 0.4em;
+}
+
+ :host>>>.ui-dropdown-panel .ui-dropdown-filter-container .ui-dropdown-filter {
+	height: 30px;
+	line-height: 30px;
+	padding-right: 1em;
+	border: 1px solid #aaaaaa;
+	border-radius: 4px;
+	padding-bottom: 0;
+}
+
+ :host>>>.ui-button.ui-button-text-only .ui-button-text {
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	display: none;
+}
+
+ :host>>>.ui-editor-container .ui-editor-toolbar {
+	display: none !important;
+}
+
+@media (min-width: 1920px) {
+	.field-wrap {
+		margin-bottom: 20px;
+	}
+	.term-service {
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.right-box {
+		padding: 38px 20px;
+	}
+	.contact-details {
+		padding: 0 15px;
+		padding-bottom: 15px;
+	}
+}

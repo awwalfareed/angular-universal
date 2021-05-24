@@ -1,0 +1,24 @@
+<div class="gallery-wrap">
+  <h1 class="text-center main-heading mb-5 blue-color">Gallery</h1>
+  <div class="container">
+  <swiper [slidesPerView]="1" [navigation]="true"
+      [pagination]="{ el: '.swiper-pagination.pagination-test' }">
+      <ng-template swiperSlide *ngFor="let image of galleryData;">
+        <div class="gallery-item">
+        <img *ngIf="image.image" [src]="image.image" class="img-fluid">
+        <div class="video gallery-image" *ngIf="image.video">
+          <!-- <img [src]="img.gallery.thumbnail" *ngIf="!playVideo" alt=""
+            class="img-fluid img-thumbnail w-100 border-radius4px video-thumbnail"> -->
+          <!-- <span class="video-thumbnail-title" *ngIf="!playVideo" (click)="playVideo = !playVideo"><i
+              class="fa fa-play-circle"></i></span> -->
+          <video controls class="img-fluid ">
+            <source [src]="image.video" type="video/mp4" />
+            Browser not supported
+          </video>
+        </div>
+      </div>
+  </ng-template>
+  </swiper>
+</div>
+</div>
+

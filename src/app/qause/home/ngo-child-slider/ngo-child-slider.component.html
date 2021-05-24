@@ -1,0 +1,147 @@
+<div id="carouselExampleInterval" class="hero-banner carousel carousel-fade" data-ride="carousel"  data-interval="3000">
+     <!-- Indicators -->
+    <div class="container">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleInterval" *ngFor="let slide of childData; let i=index" [attr.data-slide-to]="i" [ngClass]="{'active' : i == 0}"></li>
+        </ol>
+    </div>
+    <div class="carousel-inner">
+      <div class="banner-header carousel-item" *ngFor="let slide of childData; let i=index" [ngClass]="{'active': i == 0}">
+        <img src="assets/images/qause/homepage/{{slide.image}}" class="d-block w-100" alt="...">
+        <div class="container">
+            <div class="hero-banner-content">
+              <h3>{{slide.title}}</h3>
+              <div>
+                <a href="" class="readmore"
+                  >Read Story <i class="fa fa-caret-right"></i
+                ></a>
+              </div>
+              <div class="d-flex btn-grp">
+              <button class="yellow-btn border-0 ml-2 mr-2">Volunteer to help</button>
+              <button class="yellow-btn border-0 ml-2 mr-2" (click)="showBasicDialog()">Donate to us</button>
+              <button class="yellow-btn border-0 ml-2 mr-2" (click)="showBasicDialog2()">Failed</button>
+              <button class="yellow-btn border-0 ml-2 mr-2" (click)="showBasicDialog3()">Thank</button>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="donation-modal">
+  <p-dialog [(visible)]="displayBasic" [style]="{width: '50vw'}" [baseZIndex]="10000">
+    <p-header class="text-center">
+      <h4>Be Proud!</h4>
+      <p>You’ve made a decision to bring significant change in someone’s life!</p>
+    </p-header>
+    <div class="modal-form">
+      <form action="">
+        <div class="input-group d-block">
+          <label>Enter Donation Amount*</label>
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center">
+              <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name" class="rupee-dropdown position-relative"></p-dropdown>
+            <input type="text" class="rupee-input" placeholder="ex 200">
+          </div>
+          <div class="payment-category">
+            <p-dropdown [options]="cities" [(ngModel)]="selectedCity2" editable="true" optionLabel="name"></p-dropdown>
+          </div>
+          </div>
+          <span>Big or small, your contribution goes a long way</span>
+        </div>
+        <div class="input-group d-block mt-5">
+          <div>
+            <input type="text" class="w-100">
+          </div>
+         <div class="mt-3">
+          <div class="p-field-checkbox">
+            <p-checkbox name="group1" value="New York" [(ngModel)]="selecteddropdown" inputId="ny"></p-checkbox>
+            <label for="ny" class="ml-3">I would like to make my donation anonymously</label>
+        </div>
+         </div>
+        </div>
+        <div class="d-block mt-5">
+          <label>Continue As a Guest*</label>
+          <div class="ui-inputgroup d-flex align-items-center">
+            <span class="ui-inputgroup-addon mt-0"><i class="pi pi-envelope"></i></span>
+            <input type="text" pInputText placeholder="Email id" class="w-100">
+
+        </div>
+        <span class="text-right">Already have an account? <a>Login</a> or <a>Sign Up</a></span>
+        </div>
+        <div class="input-group d-block mt-5">
+          <label>Mobile Number (Optional)</label>
+          <div class="input-group field-wrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-phone mx-auto" aria-hidden="true"></i></span>
+            </div>
+             <p-dropdown [options]="items" [(ngModel)]="selectedPhoneCode" name="selectedCode" filter="true"
+              filterBy="value" class="mobile-dopdown">
+              <ng-template let-item pTemplate="selectedItem">
+                <img src="assets/images/countryFlags/{{
+                    item.label | lowercase
+                  }}.png" style="width: 16px; vertical-align: middle" />
+                <span style="vertical-align: middle; margin-left: 0.5em">+{{ item.value }}</span>
+              </ng-template>
+              <ng-template let-car pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative; height: 25px">
+                  <img src="assets/images/countryFlags/{{
+                      car.label | lowercase
+                    }}.png" style="width: 24px; position: absolute; top: 1px; left: 5px" />
+                  <div style="font-size: 14px; float: right; margin-top: 4px">
+                    +{{ car.value }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <input type="number" class="form-control" placeholder="Mobile Number *" required />
+
+          </div>
+        </div>
+        <div class="modal-bottom-content text-center mt-5">
+          <p>Did you know that when you donate to other online giving platforms,
+             a sizable chunk (usually in excess of 9%) gets deducted from your donation?</p>
+             <span>Not at Qause!</span>
+             <h5>We assure 0% deduction from your donation, so that the entire amount reaches the beneficiary.</h5>
+
+        </div>
+      </form>
+    </div>
+    <p-footer class="text-center mt-5 w-100">
+      <button class="d-block text-center">Yes, I want to make a difference</button>
+     </p-footer>
+</p-dialog>
+</div>  -->
+
+<!-- thank you-modal -->
+<!-- <div class="thankyou-modal">
+  <p-dialog [(visible)]="displayBasic" [style]="{width: '724px'}" [baseZIndex]="10000">
+    <div class="thank-you-inner">
+      <div>
+      <img src="/assets/images/homepage/thankyou-heart.svg" class="img-fluid">
+    </div>
+    <div>
+      <img src="/assets/images/homepage/thankyou-img.svg" class="img-fluid">
+    </div>
+    <p class="mt-5">You have successfully donated a valuable amount to the people in need! Every bit of your contribution is deeplyappreciated by <a> Qause.</a></p>
+      <h5 class="mt-5">It is the generosity and belief of the people like you in our vision that enables us to perform this work, and we are deeply grateful for your valuable donation. </h5>
+      <button>click for Failed payment content</button>
+    </div>
+</p-dialog>
+</div> -->
+
+<!-- payment-failed-modal -->
+<!-- <div class="payment-failed-modal">
+  <p-dialog [(visible)]="displayBasic" [style]="{width: '724px'}" [baseZIndex]="10000">
+    <div class="payment-failed-inner text-center">
+      <div>
+      <img src="/assets/images/homepage/payment-fail.svg" class="img-fluid">
+    </div>
+    <h2 class="mt-5">UH-OH! <br>
+      WE COULDN'T PROCESS YOUR PAYMENT</h2>
+      <p class="mt-5">Unfortunately, we were unable to collect your payment due to card
+        failure/ technical issues. </p>
+        <h5 class="mt-5">You can click here to change your payment mode or try again with the same method. </h5>
+        <button>Change the Payment Method</button>
+    </div>
+</p-dialog>
+</div> -->

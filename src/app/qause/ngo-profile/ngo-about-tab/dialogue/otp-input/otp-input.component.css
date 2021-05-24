@@ -1,0 +1,42 @@
+
+.otp-input {
+  width: 48px;
+  height: 2em;
+  text-align: center;
+  font-size: 2.8rem;
+  border-left: 0;
+  border: none;
+  border-bottom: 2px solid #e4e4e4;
+  }
+  .otp-input:focus {
+    outline: none;
+    border-bottom-color: #253dc1;
+  }
+  
+  .otp-container .otp-input:not(:last-child) {
+    margin-right: 8px;
+  }
+  .resend-otp{
+    color:#ea6408;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .counter{
+    color:#353636;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: block;
+  }
+  .btn-primary{
+    color: #253dc0 !important;
+    font-size: 2.0rem !important;
+    font-weight: bold !important;
+    border: 1px solid !important;
+    opacity: 1 !important;
+    padding: 0 20px !important;
+    height: 50px;
+    line-height: 50px !important;
+  }
+  .otperror{
+    font-weight: bold !important;
+  }

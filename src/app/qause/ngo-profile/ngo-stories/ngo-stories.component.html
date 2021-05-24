@@ -1,0 +1,97 @@
+<div class="ngo-inspiring-wrap">
+    <div class="container">
+       <div class="ngo-inspiring-wrap-info text-center">
+          <h1 class="blue-color main-title mb-5">Inspiring Stories</h1>
+          <p>It is a long established fact that a reader will be distracted
+             by the readable content of a page when looking at its layout.
+          </p>
+          <div class="custom-arrow-btn d-flex justify-content-center align-items-center">
+             <button (click)="prev()"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+             <span>Tap to know more stories</span>
+             <button (click)="next()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          </div>
+       </div>
+    </div>
+    <swiper [slidesPerView]="4" [spaceBetween]="0" [loop]="false" [navigation]="true"
+    [pagination]="false" class="ngo-inspiring-story-main">
+    <ng-template swiperSlide>
+       <div class="ngo-inspiring-slider-inner">
+          <figure>
+             <img src="https://www.dailypioneer.com/uploads/2017/story/images/big/191286_1.jpg" class="img-fluid">
+          </figure>
+          <div class="insipring-inner-story">
+            <div class="featured-story">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>FEATURED
+                  STORY</span>
+                </div>
+             <div class="share-story">
+                <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+             </div>
+             <div class="inner-story-info">
+                <p class="mb-0">Shazli khan</p>
+             </div>
+          </div>
+       </div>
+    </ng-template>
+    <ng-template swiperSlide>
+        <div class="ngo-inspiring-slider-inner">
+           <figure>
+              <img src="https://i0.wp.com/rotarynewsonline.org/wp-content/uploads/2017/09/vizag-kids.jpg?ssl=1" class="img-fluid">
+           </figure>
+           <div class="insipring-inner-story">
+             <div class="featured-story">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <span>FEATURED
+                   STORY</span>
+                 </div>
+              <div class="share-story">
+                 <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              </div>
+              <div class="inner-story-info">
+                 <p class="mb-0">Shazli khan</p>
+              </div>
+           </div>
+        </div>
+     </ng-template>
+     <ng-template swiperSlide>
+        <div class="ngo-inspiring-slider-inner">
+           <figure>
+              <img src="https://i.pinimg.com/originals/b1/8c/93/b18c93ecc750c99be075d8a41adee614.jpg" class="img-fluid">
+           </figure>
+           <div class="insipring-inner-story">
+             <div class="featured-story">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <span>FEATURED
+                   STORY</span>
+                 </div>
+              <div class="share-story">
+                 <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              </div>
+              <div class="inner-story-info">
+                 <p class="mb-0">Shazli khan</p>
+              </div>
+           </div>
+        </div>
+     </ng-template>
+     <ng-template swiperSlide>
+        <div class="ngo-inspiring-slider-inner">
+           <figure>
+              <img src="https://i.pinimg.com/280x280_RS/9c/2f/4e/9c2f4efdbd502b3b9eaa1aa858dfe0e4.jpg" class="img-fluid">
+           </figure>
+           <div class="insipring-inner-story">
+             <div class="featured-story">
+                 <i class="fa fa-star" aria-hidden="true"></i>
+                 <span>FEATURED
+                   STORY</span>
+                 </div>
+              <div class="share-story">
+                 <a href=""><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+              </div>
+              <div class="inner-story-info">
+                 <p class="mb-0">Shazli khan</p>
+              </div>
+           </div>
+        </div>
+     </ng-template>
+    </swiper>

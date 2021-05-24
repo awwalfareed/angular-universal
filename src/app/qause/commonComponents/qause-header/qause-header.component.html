@@ -1,0 +1,40 @@
+<header class="py-4 py-xl-5">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="logo mr-5">
+          <a href=""
+            ><img src="assets/images/qause/homepage/logo.png" class="img-fluid" alt=""
+          /></a>
+        </div>
+        <div class="mobile-join-us d-lg-none d-block">
+          <span>Join Us</span>
+      </div>
+        <nav>
+          <div class="blacklayer {{this.navToggle}}" >
+            <div id="nav-icon1" class="menubar d-xl-none mr-4 mt-2 {{this.navToggle}}" (click)="toggle()">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        </div>
+          <ul class="d-md-flex d-sm-block {{this.navToggle}}">
+            <li><a routerLink="/">Home</a></li>
+            <!-- <li><a href="">About Us</a></li> -->
+            <li><a routerLink="/ngo-login">Log In</a></li>
+            <li><a routerLink="/ngo-signup">join Us</a></li>
+          </ul>
+        </nav>
+        <div class="d-lg-block d-none">
+        <div class="header-social-icons d-flex ml-auto ">
+          <a href="" class="fb social-icon"></a>
+          <a href="" class="yt social-icon"></a>
+          <a href="" class="insta social-icon"></a>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+  </header>
+
+

@@ -1,0 +1,168 @@
+/* digital-world */
+.digital-world{
+   padding: 100px 0;
+}
+.orange-color{
+   color: #f7a212;
+}
+ .category-city-wrapper ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0;
+ }
+ input{
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+ }
+ input::-webkit-input-placeholder { /* Edge */
+   color: #f7a212;
+   font-weight: bold;
+ }
+ 
+ input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #f7a212;
+   font-weight: bold;
+ }
+ 
+ input::placeholder {
+   color: #f7a212;
+   font-weight: bold;
+ }
+ .category-city-wrapper ul li:first-child{
+  width: auto;
+  white-space: pre;
+  color: #f7a212;
+  font-weight: bold;
+ }
+ .category-city-wrapper ul li{
+     padding: 0 20px;
+     position: relative;
+     height: 60px;
+     line-height: 60px;
+     width: 100%;
+     font-size: 1.8rem;
+     font-weight: 500;
+  }
+  .custom-icons {
+   background: url(src/assets/images/homepage/small-icons.png) no-repeat;
+   vertical-align: middle;
+   display: inline-block;
+}
+  .red-heart {
+   width: 23px;
+   height: 28px;
+   margin-right: 10px;
+}
+
+.red-map {
+   width: 23px;
+   height: 28px;
+   background-position-y: -31px;
+   margin-right: 10px;
+}
+select {
+   background: url(src/assets/images/homepage/angle-down.png) no-repeat;
+   background-position: right 10px center;
+   height: 40px;
+   padding: 0 10px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   text-indent: 1px;
+   outline: none;
+   text-overflow: '';
+}
+ .category-city-wrapper ul li select{
+  width: 100%;
+  border: 0;
+  height: 100%;
+ }
+ .category-city-wrapper ul li:after{
+     content: '';
+     width: 1px;
+     height: 90%;
+     background: #e1e1e1;
+     position: absolute;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+ }
+ 
+ .category-city-wrapper ul li:last-child::after ,   .category-city-wrapper ul li:nth-last-child(2)::after{
+    content: none;
+ }
+ .category-city-wrapper{
+  border: 2px solid #e1e1e1;
+  padding-left:30px;
+  border-radius: 39px;
+ }
+
+ .category-city-wrapper{
+   margin-top: 50px;
+ }
+ .category-city-wrapper ul li:last-child{  
+  border-radius: 50px;
+  text-align: center;
+  max-width: 110px;
+  padding: 0;
+ }
+ .category-city-wrapper ul li .search-digital{
+  background: #f4a340;
+  width: 100%;
+  display: block;
+  border-radius: 40px;
+  font-size: 30px;
+  color: #fff;
+  outline: none;
+  border: 0;
+ }
+ 
+ .category-city-wrapper ul li .search-digital:hover{
+    background-color: #253dc0;
+ }
+ .explore-more{
+   color: #bcbcbc;
+   font-size: 2rem;
+   font-weight: 600;
+   text-decoration: underline !important;
+   border: 0;
+   background: transparent;
+   margin: 50px auto 0;
+   text-align: center;
+   display: block;
+ }
+ @media (max-width:767px){
+   .digital-world{
+       padding: 50px 0;
+       margin-top: 30px;
+   }
+   .category-city-wrapper ul{
+      display: block !important;
+  }
+  .category-city-wrapper{
+   border: 0;
+   padding: 0;
+  }
+  .category-city-wrapper ul li{
+   border-bottom: 1px solid #e1e1e1;
+   margin-bottom: 10px;
+   padding-bottom: 10px;
+   height: auto;
+   line-height: auto !important;
+   padding-left: 0;
+   padding-right: 0;
+  }
+  .category-city-wrapper ul li:last-child{
+   margin: 0 auto;
+  }
+  .category-city-wrapper ul li:after{
+     display: none;
+  }
+  .category-city-wrapper ul li .search-digital{
+     border-radius: 0;
+     
+  }
+}

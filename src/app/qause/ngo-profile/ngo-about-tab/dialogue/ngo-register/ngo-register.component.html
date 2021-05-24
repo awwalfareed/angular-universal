@@ -1,0 +1,204 @@
+<div class="register-dialogue-wrap">
+  <div class="row">
+    <div class="col-md-6 ">
+      <div class="left-box">
+        <div>
+          <div class="text-center">
+            <img src="/assets/images/signup-qause-logo.png" alt="" />
+          </div>
+          <div class="d-flex contact-details justify-content-between">
+            <a href="tel:919119333999"><i class="fa fa-phone"></i> +91 9119333999</a>
+            <a href="mailto:support@qause.com"><i class="fa fa-envelope"></i> support@qause.com</a>
+          </div>
+          <h3 class="text-center">
+            Join us to <br />
+            move closer to your mission.<br />
+            FOR FREE!<br />
+            Enabling web presence and<br />
+            showcasing your causes<br />
+            to the world can get you there.<br />
+            <span [ngStyle]="{
+                color: '#1d1d1b',
+                'margin-top': '50px',
+                display: 'block'
+              }">
+              We're here for you.<br />
+              We're here for a Qause.</span>
+          </h3>
+        </div>
+        <div class="text-center">
+          <img src="/assets/images/public/joinus/signup1.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pl-0">
+      <div class="right-box">
+      <form #signupForm="ngForm" (submit)="ngoSignup(signupForm)">
+        <p>Fill in your details below and you’re good to go!</p>
+        <div class="form-wrapper">
+          <div class="input-group field-wrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-sitemap mx-auto" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="name" (keypress)="alphaOnly($event)" [(ngModel)]="model.name"
+              maxlength="100" #ngoName="ngModel" placeholder="Orgnization Name *" [ngClass]="{
+                'is-invalid':
+                  (ngoName.errors && ngoName.touched) ||
+                  (errors.name && ngoName.touched)
+              }" required />
+            <div class="invalid-feedback" [hidden]="!ngoName.errors?.required">
+              Organization Name is Required
+            </div>
+          </div>
+          <div class="input-group field-wrap mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user mx-auto" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Contact Person Name *" name="contactPerson"
+              (keypress)="alphaOnly($event)" [(ngModel)]="model.contactPerson" maxlength="100" #founderName="ngModel"
+              [ngClass]="{
+                'is-invalid':
+                  (founderName.errors && founderName.touched) ||
+                  (errors.name && founderName.touched)
+              }" required />
+            <div class="invalid-feedback" [hidden]="!founderName.errors?.required">
+              Contact person name is Required
+            </div>
+          </div>
+          <div class="field-wrap">
+            <div class="p-field-checkbox d-flex">
+              <p-checkbox class="example-margin mr-2" name="isFounder" binary="true" [(ngModel)]="isFounder">
+              </p-checkbox>
+              <label for="binary">&nbsp; Are you the founder?</label>
+            </div>
+          </div>
+          <div class="input-group field-wrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-envelope mx-auto" aria-hidden="true"></i></span>
+            </div>
+            <input (keyup)="errors=''" type="email" class="form-control" placeholder="Email ID *" name="email"
+              [(ngModel)]="model.email"
+              #userEmail="ngModel" [ngClass]="{
+                'is-invalid':
+                  (userEmail.errors && userEmail.touched) ||
+                  (errors?.email) ||
+                  (errors?.user)
+              }" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required />
+            <div class="invalid-feedback" [hidden]="!userEmail.errors?.pattern">
+              Use a valid email.
+            </div>
+            <div class="invalid-feedback" [hidden]="!userEmail.errors?.required">
+              Email is Required.
+            </div>
+            <div class="invalid-feedback" [hidden]="!errors?.email">
+              {{ errors?.email }}
+            </div>
+            <div class="invalid-feedback" [hidden]="!errors?.user">
+              This Email is Already Exist.
+            </div>
+          </div>
+          <div class="input-group field-wrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-phone mx-auto" aria-hidden="true"></i></span>
+            </div>
+            <p-dropdown [options]="items" [(ngModel)]="selectedPhoneCode" name="selectedCode" filter="true"
+              filterBy="value" class="mobile-dopdown">
+              <ng-template let-item pTemplate="selectedItem">
+                <img src="assets/images/countryFlags/{{
+                    item.label | lowercase
+                  }}.png" style="width: 16px; vertical-align: middle" />
+                <span style="vertical-align: middle; margin-left: 0.5em">+{{ item.value }}</span>
+              </ng-template>
+              <ng-template let-car pTemplate="item">
+                <div class="ui-helper-clearfix" style="position: relative; height: 25px">
+                  <img src="assets/images/countryFlags/{{
+                      car.label | lowercase
+                    }}.png" style="width: 24px; position: absolute; top: 1px; left: 5px" />
+                  <div style="font-size: 14px; float: right; margin-top: 4px">
+                    +{{ car.value }}
+                  </div>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <input (keyup)="errors=''" type="number" class="form-control" placeholder="Mobile Number *"
+              name="enteredmobile" [(ngModel)]="model.enteredmobile" #userMobile="ngModel" [ngClass]="{
+                'is-invalid': (userMobile.errors && userMobile.touched) ||
+                  (errors?.mobile) || (errors?.user) }" required />
+            <div class="invalid-feedback" [hidden]="!userMobile.errors?.required">
+              Mobile No. is Required.
+            </div>
+            <div class="invalid-feedback" [hidden]="!errors?.mobile">
+              {{ errors?.mobile }}
+            </div>
+            <div class="invalid-feedback" [hidden]="!errors?.user">
+              This Mobile is Already Exist.
+            </div>
+          </div>
+          <div class="input-group field-wrap flex-nowrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-map-marker mx-auto" aria-hidden="true"></i></span>
+            </div>
+            <p-dropdown (click)="getLocation()" styleClass="form-control" [options]="ngoStates" name="state"
+              [(ngModel)]="selectStates" #state="ngModel" (onChange)="changeStates($event)" class="w-100" required>
+            </p-dropdown>
+          </div>
+          <div class="field-wrap">
+            <label for="">Choose your custom domain *</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-globe mx-auto" aria-hidden="true"></i></span>
+              </div>
+              <span class="position-absolute ngo-domain-name-fixed">www.qause.com/ngo/</span>
+              <input type="text" id="ngo-sub-domain"
+                (keyup)="checkDomainData($event); websiteValue=''" required
+                class="form-control position-relative ngo-sub-domain" name="website" [(ngModel)]="model.website"
+                #userWebsite="ngModel" [ngClass]="{
+                  'is-invalid':
+                    (userWebsite.errors && userWebsite.touched) ||
+                    (isDomainAvailable && userWebsite.touched)
+                }" />
+              <p-progressSpinner *ngIf="checkingDomain" [style]="{width: '25px', height: '25px'}" strokeWidth="3"
+                class="inputloader-fixed">
+              </p-progressSpinner>
+              <div class="invalid-feedback" [hidden]="!isDomainAvailable">
+                {{ websiteValue?.message }}
+              </div>
+              <div class="invalid-feedback" [hidden]="!userWebsite.errors?.required">
+                Domain is Required.
+              </div>
+            </div>
+          </div>
+          <div class="term-service">
+            <section class="example-section">
+              <div class="p-field-checkbox mb-3">
+                <p-checkbox name="isTermsandcondition" (onChange)="agree($event)" binary="true" value="agree"
+                  [required]="true">
+                </p-checkbox>
+                <label for="binary" class="ml-2">I have read and agree to the terms of service</label><br />
+              </div>
+              <div class="p-field-checkbox d-flex">
+                <p-checkbox name="isPassionGruAccessable" binary="true" [(ngModel)]="isPassionGruAccessable"
+                  class="example-margin mr-2">
+                </p-checkbox>
+                <label for="binary">
+                  We want access to FREE online PassionGuru <br />
+                  classes for less fortunate children.
+                </label>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="text-center btnbx mb-3 mt-4">
+          <button pButton type="submit" label="Verify Your Number"
+            class="ui-button-raised ui-button-primary common-btn border-radius4px btn-box-shadow"
+            [disabled]="signupForm.invalid || checkingDomain || Agree_btn"></button>
+        </div>
+        <p class="text-center text-muted mb-0 mt-3">
+          Already have an account?
+          <a routerLink="/ngo-login" class="text-dark">Sign in</a>
+        </p>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>

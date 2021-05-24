@@ -1,0 +1,105 @@
+.similar-ngo-wrap{
+    padding-top: 120px;
+}
+/* ::ng-deep .similar-ngo-wrap .swiper-wrapper {
+    justify-content: center;
+} */
+.main-heading{
+    font-size: 4rem;
+    font-weight: var(--fw-bold);
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+.main-heading:before{
+    content: '';
+    width: 50%;
+    height: 1px;
+    display: block;
+    background: #e1e1e1;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.main-heading:after{
+    content: '';
+    width: 50%;
+    height: 1px;
+    display: block;
+    background: #e1e1e1;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.similar-ngo-item{
+    overflow: hidden;
+    width: 100%;
+    height: 355px;
+    margin: 0 auto;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 50px;
+}
+
+.similar-ngo-item figure img{
+    object-fit: cover;
+    height: 100%;
+}
+.similar-ngo-content{
+    background: #253dc0;
+    padding: 20px 30px;
+    text-align: left;
+    z-index: 1;
+    position: absolute;
+    max-width: 100%;
+    color: #fff;
+    margin-top: 0px;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.similar-ngo-content h3{
+    font-size: 2.3rem;
+    font-weight: 600;
+    max-width: 175px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.similar-ngo-content span{
+    display: block;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+.similar-ngo-content hr{
+    border-color: #f3f3f3;
+}
+.similar-ngo-content i{
+    color: #f7a212;
+    font-size: 3rem;
+}
+:host>>>.ngoJustify .swiper-wrapper {
+	justify-content: center;
+}
+::ng-deep .similar-ngo-wrap .swiper-button-next,
+::ng-deep .similar-ngo-wrap .swiper-button-prev {
+    color: #f7a212;
+    font-weight: bold;
+}
+@media (max-width:1024px) {
+    .similar-ngo-wrap{
+        padding-top: 70px;
+    }
+}
+@media (max-width:991px) {
+.similar-ngo-wrap{
+    padding-top: 50px;
+}
+.similar-ngo-item{
+    height: 340px;
+}
+}

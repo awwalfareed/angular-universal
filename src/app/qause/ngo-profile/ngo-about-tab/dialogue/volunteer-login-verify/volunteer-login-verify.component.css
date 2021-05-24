@@ -1,0 +1,92 @@
+.register-dialogue-wrap {
+	overflow: hidden;
+}
+.ngo-login-verify.common-content-wrap{
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+.ngo-login-verify.common-fixed{
+  min-height: 100%;
+}
+.verify-number{
+  padding-bottom: 15px;
+}
+
+ ::ng-deep .ui-dialog-titlebar {
+	border: 0 !important;
+	background: #fff !important;
+}
+
+.registered-dialogue {
+	background: #fff;
+	height: 100%;
+	box-shadow: 0px 0px 0px 0px #cec8c8;
+	padding: 30px;
+}
+
+.registered-dialogue .form-control {
+	border: none!important;
+	border-bottom: 2px solid #f7a212 !important;
+	border-radius: 0;
+	padding: 0;
+	color: #1a1a1a;
+	font-size: 1.6rem;
+}
+
+.custom-domain-title {
+	color: #253dc0;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	font-weight: bold;
+	display: block;
+}
+
+.registered-dialogue .form-group {
+	margin-bottom: 2rem;
+}
+.verify-number {
+    padding-bottom: 20px;
+  }
+  .otperror {
+    color: red !important;
+  }
+  .pt-8 {
+    padding-top: 8px;
+  }
+  
+  .ngo-otp-verificaion p {
+    font-size: 1.5rem;
+    color: #353636;
+    font-weight: 400;
+  }
+  label {
+    font-size: 1.5rem;
+    color: #313131;
+    font-weight: 400;
+  }
+  :host >>>  .ui-chkbox .ui-chkbox-box {
+    border-radius: 0;
+    border-collapse: #a9a9a9;
+  }
+  :host >>> .ui-button {
+    margin: 0 auto;
+  }
+  :host >>> .ui-button.ui-button-text-only .ui-button-text {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  .btn-box-shadow{
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .btn-box-shadow:disabled {
+    color: #fff;
+    background: #eee !important;
+    color: #636363;
+  }
+  .btn-box-shadow:enabled {
+    color: #fff !important;
+    background: #253dc1 !important;
+  }
+  

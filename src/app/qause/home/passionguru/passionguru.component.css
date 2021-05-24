@@ -1,0 +1,68 @@
+.divider{
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+hr{
+    border-top: 1px solid #e1e1e1;
+}
+.passion-guru-wrap{
+    background: url(/assets/images/homepage/passion-guru-bg.jpg)no-repeat center center;
+    padding-bottom: 80px;
+}
+.passoin-guru-content{
+    color: #f68e23;
+}
+.passoin-guru-content h3{
+    font-size: 1.8rem;
+    margin: 50px 0;
+    font-weight: bold;
+}
+.passoin-guru-content p{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.know-more{
+    background: #19cedc;
+    padding: 14px 24px;
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: -4px 4px #0ecad9;
+    transition: .3s ease;
+    border: 0;
+    margin-top: 50px;
+}
+.social-icon {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 180px;
+}
+.social-icon i{
+    font-size: 3rem;
+    color: #19cedc;
+}
+@media (max-width:767px) {
+    .passion-guru-wrap{
+        padding-bottom: 50px;
+    }
+    .divider{
+        margin-bottom: 50px;
+    }
+    .passoin-guru-content{
+        text-align: center;
+    }
+    .passoin-guru-content h3{
+        margin: 20px 0;
+    }
+    .know-more{
+        margin-top: 20px;
+    }
+    .social-icon{
+       max-width: 70%;
+       width: 100%;
+     margin: 28px auto 20px;
+    }
+}

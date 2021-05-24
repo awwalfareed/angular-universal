@@ -1,0 +1,23 @@
+.common-content-wrap{
+  padding: 0 30px;
+}
+.verify-number {
+    padding-bottom: 50px;
+  }
+  
+  .otperror {
+    color: red !important;
+  }
+  .ngo-otp-verificaion p {
+    font-size: 1.4rem;
+    color: #353636;
+    font-weight: 400;
+  }
+  .verify-btn:disabled{
+    background: #eee !important;
+    color: #636363 !important;
+  }
+  ::ng-deep .ui-dialog .ui-dialog-content{
+    padding: 0px !important;
+  }
+  

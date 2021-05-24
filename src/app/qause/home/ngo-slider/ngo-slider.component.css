@@ -1,0 +1,97 @@
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  .hero-banner{
+    margin-top: -114px;
+  }
+  .hero-banner .carousel-indicators{
+    justify-content: flex-start;
+    margin-left: 21%;
+  }
+  .ngo-logo{
+      margin-bottom: 70px;
+  }
+  .hero-banner .hero-banner-content{
+    position: absolute;
+    z-index: 4;
+    max-width: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+   }
+ 
+   .hero-banner .hero-banner-content h3{
+      font-size: 5rem;
+      color: #fff;
+      margin-bottom: 40px;
+   }
+ 
+   .hero-banner .hero-banner-content a.readmore{
+        font-size: 2rem;
+        color: #253dc0;
+        display: inline-block;
+        margin-bottom: 50px;
+        text-decoration: underline !important;
+   }
+   .hero-banner .hero-banner-content a.readmore i{
+    color: #fff;
+    margin-left: 10px;
+    font-size: 25px;
+    vertical-align: middle;
+   }
+   .blue-btn{
+    background: #253dc0;
+    padding: 14px 24px;
+    display: inline-block;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: -4px 4px #192c90;
+    transition: .3s ease;
+ }
+ @media (max-width:1024px) {
+  .hero-banner .hero-banner-content{
+    padding: 50px 0;
+  }
+  .carousel-item figure img{
+    height: 500px;
+    object-fit: cover;
+  }
+  .hero-banner .hero-banner-content h3{
+    margin-bottom: 20px;
+    font-size: 4rem;
+  }
+  .hero-banner .hero-banner-content a.readmore{
+      margin-bottom: 20px;
+      
+  }
+  .hero-banner .carousel-indicators{
+    margin-left: 46px ;
+    bottom: 20px;
+  }
+}
+  @media (max-width:767px)
+  {
+    .carousel-item figure img{
+      height: auto;
+    }
+    .hero-banner .hero-banner-content{
+      position: static;
+      width: 100%;
+      transform: translate(0);
+      text-align: center;
+    }
+   .hero-banner .hero-banner-content h3{
+    color: #253dc0;
+   }
+   .btn-grp{
+     justify-content: center;
+   }
+   .ngo-logo{
+     margin-bottom: 20px;
+   }
+  }
+ 
+ 

@@ -1,0 +1,35 @@
+<div class="similar-ngo-wrap" *ngIf="allSimilarNGO">
+    <h1 class="text-center main-heading mb-5 blue-color">Similar Ngo’s</h1>
+    <div class="container-fluid">    
+        <div class="similar-ngo-inner">
+        <swiper
+        [slidesPerView]="slideritems"
+        [spaceBetween]="50"
+        [navigation]="true"
+        [class.ngoJustify]="allSimilarNGO.length < 4"
+        >
+            <ng-template swiperSlide *ngFor="let ngo of allSimilarNGO; let i=index;">
+                <div class="similar-ngo-item mt-4" (click)="onNavigate(ngo.website)">
+                    <figure>
+                    <img src="https://qauseuat.s3.amazonaws.com/ngo/{{ngo.images.logo}}" class="img-fluid">
+                    </figure>
+                </div>
+                <div class="similar-ngo-content" (click)="onNavigate(ngo.website)">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="w-100">
+                            <h3>{{ngo.name}}</h3>
+                            <hr>
+                            <span>Category - {{ngo.category.name}}</span>
+                        </div>
+                        <div class="ml-5">
+                            <a>
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+</div>

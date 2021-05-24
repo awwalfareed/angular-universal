@@ -1,0 +1,332 @@
+:host >>> .login-dialogue-wrap .ui-dialog{
+  width: 490px  !important;
+}
+.form-control {
+    font-size: 1.6rem;
+    color: #636363;
+    font-weight: 500;
+  }
+  
+  .common-fixed {
+    background: #f2f2f2;
+  }
+  
+  .common-label {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #031c2c;
+  }
+  
+  i {
+    font-size: 1.4em;
+    color: #636363;
+  }
+  
+  .toggleBtn {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: auto;
+    display: block;
+    padding-top: 9px;
+    color: #666666;
+    font-size: 1.4rem;
+    outline: none;
+    cursor: pointer;
+    float: right;
+    font-weight: 600;
+  }
+  
+  input:focus,
+  select:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* Edge */
+    color: #636363;
+  }
+  
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #636363;
+  }
+  
+  ::-moz-placeholder {
+    color: #636363;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #636363;
+  }
+  
+  ::placeholder {
+    color: #636363;
+  }
+  
+  h3.toggleBtn {
+    color: #636363;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  :host >>> 
+    .ui-dropdown-panel
+    .ui-dropdown-items
+    .ui-dropdown-item.ui-state-highlight,
+    :host >>> .ui-dropdown-panel
+    .ui-dropdown-items
+    .ui-dropdown-item-group.ui-state-highlight {
+    color: #ffffff;
+    background-color: #253dc1;
+  }
+  
+  :host >>> .ui-dropdown .ui-dropdown-panel {
+    min-width: 60%;
+  }
+  
+  /* drop-down */
+  :host >>> body .ui-dropdown {
+    width: 110px;
+    min-width: 5em;
+    background: none;
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #aaaaaa;
+    border-right: 0;
+    height: 45px;
+    line-height: 38px;
+  }
+  
+  :host >>> .ui-dropdown.ui-dropdown-open {
+    min-width: 8em;
+  }
+  
+  .mobile-dopdown span,
+  input {
+    color: #636363;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  input {
+    border: 1px solid #aaaaaa;
+    padding-left: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 45px;
+    line-height: 45px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  
+  :host >>> .input-group-text {
+    border: 1px solid #aaaaaa;
+  }
+  
+  :host >>> .ui-inputtext {
+    background-color: transparent;
+    padding: 0 0.429em;
+  }
+  
+  :host >>> .ui-dropdown:not(.ui-state-disabled):hover {
+    border-left: 1px solid #aaaaaa;
+    border-color: #aaaaaa;
+  }
+  
+  :host >>> .ui-dropdown-panel
+    .ui-dropdown-filter-container
+    :host >>> .ui-dropdown-filter-icon,
+  :host >>> .ui-dropdown .ui-dropdown-trigger .ui-dropdown-trigger-icon {
+    color: #636363;
+    font-size: 0.9em;
+  }
+  
+  :host >>> .ui-dropdown-panel .ui-dropdown-filter-container {
+    padding: 0.4em;
+  }
+  :host >>> 
+    .ui-dropdown-panel
+    .ui-dropdown-filter-container
+    .ui-dropdown-filter {
+    height: 30px;
+    line-height: 30px;
+    padding-right: 1em;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding-bottom: 0;
+  }
+  
+  .btn-box-shadow {
+    width: 100%;
+    height: 55px;
+    color: #636363 !important;
+    font-size: 2.2rem;
+    font-weight: 500;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    border-radius: 4px;
+    max-width: 195px;
+    margin: 80px auto 100px;
+    display: block;
+    background: #eee !important;
+    -webkit-transition: 0.3s linear all !important;
+    -o-transition: 0.3s linear all !important;
+    transition: 0.3s linear all !important;
+  }
+  :host >>> .ui-button:enabled:hover {
+    color: #636363;
+    background: #eee;
+    -webkit-transition: 0.3s linear all;
+    -o-transition: 0.3s linear all;
+    transition: 0.3s linear all;
+  }
+  .btn-box-shadow:focus {
+    color: #253dc1 !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    background: #253dc1 !important;
+    opacity: 1;
+  }
+  
+  :host >>> .ui-button.ui-button-text-only .ui-button-text {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* Edge */
+    font-size: 1em;
+    color: #636363;
+    opacity: 0.6;
+  }
+  
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 1em;
+    color: #636363;
+    opacity: 0.6;
+  }
+  
+  ::-moz-placeholder {
+    color: #636363;
+    opacity: 0.6;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #636363;
+    opacity: 0.6;
+  }
+  
+  ::placeholder {
+    color: #636363;
+    opacity: 0.6;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+  :host >>> .ui-dropdown{
+    width: 110px;
+    min-width: 5em;
+    background: none;
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #aaaaaa;
+    border-right: 0;
+    height: 45px;
+    line-height: 38px;
+  }
+  .common-content-wrap{
+    margin: 0 auto;
+    padding: 3px 80px;
+  }
+  .btn-box-shadow{
+    margin: 40px auto 20px;
+    border: 0 !important;
+  }
+  .btn-box-shadow:focus{
+    color: #fff !important;
+  }
+  /* custom-ngo-volunteer-modal-css */
+  ::ng-deep .ui-dialog .ui-dialog-titlebar{
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+  }
+  ::ng-deep .ui-dialog .ui-dialog-titlebar-icons{
+    position: absolute;
+    z-index: 1;
+    right: -3px;
+    top: -5px;
+    background: #000;
+    padding: 0;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-content{
+    padding: 30px 30px !important;
+  }
+  ::ng-deep .register-dialogue-main .ui-dialog .ui-dialog-content{
+    padding: 0 !important;
+  }
+
+  ::ng-deep .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-icon{
+    margin: 0 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+  .volunteer-modal h1{
+    font-size: 1.7rem;
+    color: #707070;
+    font-weight: 500;
+    max-width:325px;
+    width:100%;
+}
+.register-unlock-ngo-box {
+  border: 1px solid #707070;
+  padding: 23px 20px;
+}
+/* ngo-volunteer-login */
+.ngo-volunteer-login .main-heading {
+    color: #f7a212;
+    font-weight: var(--fw-bold);
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.ngo-volunteer-login p{
+  color: #252525;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.ngo-volunteer-login span{
+  color: #afafaf;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.ngo-volunteer-login .btn-box-shadow{
+  margin: 25px auto 0 !important;
+}
+.ngo-volunteer-login .btn-box-shadow:focus{
+  background: #f7a212 !important;
+  color: #fff !important;
+  box-shadow: 0 0.6em 0.6em -0.2em rgb(247 162 18 / 52%) !important;
+  
+}

@@ -1,0 +1,206 @@
+.common-qause-btn {
+  padding: 14px 40px;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 800;
+  border-radius: 10px;
+  -webkit-box-shadow: -4px 4px #b2772ec9;
+  box-shadow: -4px 4px #b2772ec9;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+  border: 0;
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.white-bg-btn {
+  background: #fff;
+  color: #f7a212;
+}
+
+.white-bg-btn:hover {
+  background: #253dc0;
+  color: #fff;
+  box-shadow: -4px 4px #253dc0;
+}
+
+.ngo-banner-info-wrap {
+  background: url(/assets/images/qause/homepage/ngo-profile/ngo-banner-info-bg.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 600px;
+  position: relative;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.ngo-banner-info-inner {
+  padding: 65px 70px 0px;
+}
+
+.ngo-name-share-icon {
+  border-bottom: 1px solid #f3f3f3;
+  max-width: 418px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.ngo-name {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.ngo-banner-info-inner hr {
+  border-color: #f3f3f3;
+}
+
+.ngo-specialist p {
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.ngo-specialist p > span{
+ margin-right: 10px;
+}
+.ngo-specialist p > span:last-child{
+  margin-right: 0;
+}
+.ngo-specialist i {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: -6px;
+}
+
+:host>>>.ui-dropdown,
+:host>>>.ui-inputtext,
+:host>>>.ui-dropdown .ui-dropdown-trigger {
+  background: transparent;
+}
+
+:host>>>.ui-dropdown {
+  border: 1px solid #ffffff !important;
+  outline: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+:host>>>.ui-dropdown .ui-dropdown-label,
+:host>>>.ui-dropdown .ui-dropdown-trigger {
+  color: #fff;
+}
+
+.location-founding-year li {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.location-founding-year li:first-child {
+  border-right: 1px solid #ffffff;
+  padding-right: 30px;
+  margin-right: 30px;
+}
+
+.msg-us {
+  margin: 50px 0;
+}
+
+.msg-us span {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+
+.msg-us p {
+  color: #fff;
+}
+
+.live-impact {
+  color: #ffc86b;
+}
+
+.live-impact h2 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.live-impact span {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.volunteer-donate-btn {
+  margin-top: 50px;
+}
+
+.ngo-banner-inner {
+  border: 2px solid #fff;
+    display: block;
+    border-radius: 40px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ngo-banner-inner img {
+  max-width: 100%;
+}
+/* media query */
+@media (max-width:1600px) {
+  .location-founding-year{
+    margin-bottom: 30px !important;
+  }
+  .ngo-banner-inner{
+    max-height: 650px;
+  }
+
+  .ngo-specialist p{
+    font-size: 1.8rem !important;
+  }
+  .ngo-banner-info-wrap{
+    background-position: 0 0;
+    background-size: cover;
+  }
+}
+@media (max-width:1024px) {
+  .ngo-banner-inner{
+    max-width: 590px;
+  }
+  .ngo-specialist{
+    align-items: center;
+  }
+
+
+}
+@media (max-width:991px) {
+  .ngo-banner-info-wrap{
+    background: url(/assets/images/qause/homepage/ngo-profile/ngo-banner-info-bg-mobile.jpg) no-repeat center center;
+    height: auto;
+    background-size: cover;
+    border-radius: 0;
+  }
+  .ngo-banner-info-inner{
+    padding: 55px 15px 0px;
+  }
+  .ngo-banner-inner{
+    max-width: 390px;
+  }
+
+}
+@media (max-width:767px) {
+  .ngo-name{
+    width: 100%;
+    font-size: 2rem !important;
+  }
+}

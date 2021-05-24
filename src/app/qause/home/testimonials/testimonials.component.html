@@ -1,0 +1,45 @@
+<section class="testimonial-wrap">
+    <hr class="mt-0">
+    <h1 class="main-heading">Testimonials</h1>
+    <div class="container">
+        <swiper  [slidesPerView]="1" [spaceBetween]="0" [loop]="true" [navigation]="true">
+            <ng-template swiperSlide>
+               <div class="testimonial-item">
+                 <figure>
+                     <img src="https://i.pinimg.com/736x/a7/66/92/a766923c29305a16ce461b2ae54f4c68.jpg" class="img-fluid">
+                 </figure>
+                 <div class="testimonial-content text-center">
+                    <h1 class="testimonial-no">01</h1>
+                    <span class="testimonial-profession">Professionals in their help!</span>
+                    <p>It is a long established fact that a reader will be distracted by the readable 
+                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                         that it has a more-or-less normal distribution of letters, as opposed to using 
+                        'Content here, content here', making it look like readable English. </p>
+                        <span class="name">- Amit Singh ( Smile Foundation)</span>
+                 </div>
+               </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="testimonial-item">
+                  <figure>
+                      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" class="img-fluid">
+                  </figure>
+                  <div class="testimonial-content text-center">
+                     <h1 class="testimonial-no">02</h1>
+                     <span class="testimonial-profession">Professionals in their help!</span>
+                     <p>It is a long established fact that a reader will be distracted by the readable 
+                         content of a page when looking at its layout. The point of using Lorem Ipsum is
+                          that it has a more-or-less normal distribution of letters, as opposed to using 
+                         'Content here, content here', making it look like readable English. </p>
+                         <span class="name">- Ajit Singh ( Renu Foundation)</span>
+                  </div>
+                </div>
+             </ng-template>
+   </swiper>
+        <div class="custom-arrow-btn d-flex justify-content-center align-items-center">
+        <button (click)="prev()"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+        <button (click)="next()"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <hr class="mb-0">
+</section>

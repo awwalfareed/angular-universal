@@ -1,0 +1,38 @@
+{
+    "childSlider": [
+        {
+            "title": "Every monthly helps educate more kids like Laxmi",
+            "image": "header-banner.jpg"
+        },
+        {
+            "title": "Every monthly helps ",
+            "image": "header-banner2.jpg"
+        },
+        {
+            "title": "educate more kids like Laxmi",
+            "image": "header-banner3.jpg"
+        },
+        {
+            "title": "Monthly helps educate more kids like Laxmi",
+            "image": "header-banner4.jpg"
+        }
+    ],
+
+    "ngoSlider": [
+        {
+          "ngo_logo_image" : "ngo-logo.png",
+          "title": "Qause helped raise 500 Ipad's for our ngo kids.",
+          "image": "ngo-slide1.jpg"
+        },  
+        {
+            "ngo_logo_image" : "ngo-logo.png",
+            "title": "Qause helped raise 500",
+            "image": "header-banner3.jpg"
+          },   
+          {
+            "ngo_logo_image" : "ngo-logo.png",
+            "title": "500 Ipad's for our ngo kids.",
+            "image": "header-banner4.jpg"
+          }    
+    ]
+}

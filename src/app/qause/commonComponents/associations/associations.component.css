@@ -1,0 +1,78 @@
+.association-wrap{
+   padding: 100px 0;
+}
+.container-fluid{
+    padding-left: 98px;
+    padding-right: 98px;
+}
+ 
+::ng-deep .swiper-button-prev, .swiper-container-rtl .swiper-button-next ,
+::ng-deep .swiper-button-next{
+    color: #f7a212;
+    font-weight: bold;
+}
+.main-heading{
+    font-size: 4rem;
+    font-weight: var(--fw-bold);
+    text-transform: capitalize;
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+.main-heading:before{
+    content: '';
+    width: 50%;
+    height: 1px;
+    display: block;
+    background: #e1e1e1;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.main-heading::after{
+    content: '';
+    width: 50%;
+    height: 1px;
+    display: block;
+    background: #e1e1e1;
+    margin-top: 20px;
+    margin-left: 10px
+}
+.association-item figure{
+    height: 140px;
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+.association-item figure img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    object-fit: contain;
+    padding: 15px;
+    height: 100%;
+}
+.yellow-btn{
+    background: #f7a212;
+    padding: 11px 0;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 7px #f4a340c9;
+    transition: .3s ease;
+    border: 0;
+    display: flex;
+    align-items: center;
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    justify-content: center;
+}
+@media (max-width:767px) {
+    .container-fluid{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
